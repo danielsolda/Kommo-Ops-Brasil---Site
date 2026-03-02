@@ -114,7 +114,7 @@
             transform: translateX(0);
         }
 
-        /* NOVO: Truque para remover fundo branco de logos e torná-las brancas */
+        /* Truque para remover fundo branco de logos e torná-las brancas */
         .kommo-logo-blend {
             filter: invert(1);
             mix-blend-mode: screen;
@@ -134,8 +134,9 @@
     </nav>
 
     <!-- Hero Section (Estilo G4: Split Screen) -->
-    <header class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[90vh] flex flex-col justify-center">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+    <header class="relative pt-28 md:pt-32 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[85vh] flex flex-col justify-center">
+        <!-- Gap reduzido no mobile de gap-12 para gap-8 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
             
             <!-- Coluna Texto -->
             <div class="z-10 reveal-left">
@@ -144,18 +145,19 @@
                     Transformação Comercial
                 </div>
                 
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-4 text-white leading-[1.1]">
+                <!-- Tamanho do texto aumentado no mobile para text-5xl e tracking ajustado -->
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-4 text-white leading-[1.05]">
                     VENDAS COM <br>
                     <span class="gold-gradient-text">PREVISIBILIDADE.</span>
                 </h1>
                 
                 <!-- Typewriter -->
-                <div class="text-lg md:text-2xl font-semibold text-gray-400 mb-6 min-h-[3.5rem] md:min-h-0 flex items-center">
+                <div class="text-lg md:text-2xl font-semibold text-gray-400 mb-6 min-h-[3rem] md:min-h-0 flex items-center">
                     <i class="fa-solid fa-angle-right text-brand-gold mr-3"></i>
                     <span id="typewriter" class="text-white"></span><span class="animate-pulse text-brand-gold ml-1">|</span>
                 </div>
                 
-                <p class="text-base md:text-lg text-gray-400 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/30 pl-4">
+                <p class="text-base md:text-lg text-gray-400 max-w-lg leading-relaxed mb-8 border-l-2 border-brand-gold/30 pl-4">
                     Implemento e otimizo sua operação no <strong class="text-white">KommoCRM</strong>. Deixo seu time treinado para operar sem depender de improviso, transformando atendimento em lucro.
                 </p>
 
@@ -169,8 +171,8 @@
             </div>
 
             <!-- Coluna Imagem (Foto Profissional + Badges) -->
-            <!-- Adicionado min-h para garantir que o layout não quebra se a foto demorar a carregar -->
-            <div class="relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-16 lg:mt-0 min-h-[350px] md:min-h-[500px] flex items-center">
+            <!-- mt-16 reduzido para mt-6 no mobile para puxar a foto para cima -->
+            <div class="relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] flex items-center">
                 <!-- Fundo decorativo -->
                 <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-30 rounded-full"></div>
                 
@@ -179,7 +181,6 @@
                 
                 <!-- Badge Kommo Partner (Flutuando sobre a foto) -->
                 <div class="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-12 z-20 animate-float bg-white p-1.5 md:p-2 rounded-xl shadow-2xl border border-gray-200 scale-90 md:scale-100 min-w-[120px]">
-                    <!-- Removido o %20, deixado o nome natural para tentar forçar o reconhecimento -->
                     <img src="Badge light.png" alt="Kommo Partner" class="h-12 md:h-20 w-full object-contain">
                 </div>
 
@@ -199,10 +200,10 @@
 
     <!-- Banner Autoridade Kommo -->
     <div class="w-full bg-brand-surface border-y border-white/5 py-8 reveal">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
-            <span class="text-gray-500 font-bold uppercase tracking-[0.2em] text-sm text-center">Especialista e Parceiro Oficial</span>
-            <!-- Adicionada a nova classe kommo-logo-blend -->
-            <img src="image_50c401.png" alt="Kommo CRM" class="h-10 md:h-12 kommo-logo-blend animate-pulse" style="animation-duration: 4s;">
+        <!-- Aumentado o gap e o tamanho da imagem da kommo para h-16 (mobile) e h-24 (desktop) -->
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+            <span class="text-gray-500 font-bold uppercase tracking-[0.2em] text-sm md:text-base text-center">Especialista e Parceiro Oficial</span>
+            <img src="image_50c401.png" alt="Kommo CRM" class="h-16 md:h-24 kommo-logo-blend animate-pulse" style="animation-duration: 4s;">
         </div>
     </div>
 
