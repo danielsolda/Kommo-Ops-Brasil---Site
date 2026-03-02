@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Soldá - Consultoria KommoCRM</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#071b1e',
+                        'brand-teal': '#114b53',
+                        'brand-gold': '#c5a365',
+                        'brand-gold-hover': '#e3c285',
+                        'brand-surface': '#0d2b30',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #071b1e;
+            background-image: radial-gradient(circle at top right, rgba(17, 75, 83, 0.4) 0%, transparent 50%),
+                              radial-gradient(circle at bottom left, rgba(197, 163, 101, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        
+        /* Efeitos visuais Premium estilo G4 */
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(90deg, #c5a365 0%, #e3c285 50%, #c5a365 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animações CSS (Keyframes) */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float-delayed {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float-delayed {
+            animation: float-delayed 5s ease-in-out infinite 2s;
+        }
+
+        /* Classes para o Scroll Reveal (JS) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Ajuste para logo escuro da Kommo ficar branco no fundo escuro */
+        .invert-white {
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased selection:bg-brand-gold selection:text-brand-dark">
+
+    <!-- Navegação Minimalista -->
+    <nav class="w-full absolute top-0 left-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto right-0 reveal">
+        <div class="text-xl md:text-2xl font-black tracking-tighter text-white uppercase">
+            KOMMO OPS BRASIL<span class="text-brand-gold block text-xs md:text-sm font-bold tracking-widest mt-1 opacity-80">- Por Daniel Ribeiro</span>
+        </div>
+        <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="hidden md:flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-gold hover:text-white transition-colors">
+            Falar com Especialista <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </nav>
+
+    <!-- Hero Section (Estilo G4: Split Screen) -->
+    <header class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[90vh] flex flex-col justify-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+            
+            <!-- Coluna Texto -->
+            <div class="z-10 reveal-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                    Transformação Comercial
+                </div>
+                
+                <h1 class="text-5xl lg:text-7xl font-black tracking-tight mb-4 text-white leading-[1.1]">
+                    VENDAS COM <br>
+                    <span class="gold-gradient-text">PREVISIBILIDADE.</span>
+                </h1>
+                
+                <!-- Typewriter -->
+                <div class="text-xl md:text-2xl font-semibold text-gray-400 mb-6 h-8 flex items-center">
+                    <i class="fa-solid fa-angle-right text-brand-gold mr-3"></i>
+                    <span id="typewriter" class="text-white"></span><span class="animate-pulse text-brand-gold ml-1">|</span>
+                </div>
+                
+                <p class="text-lg text-gray-400 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/30 pl-4">
+                    Implemento e otimizo sua operação no <strong class="text-white">KommoCRM</strong>. Deixo seu time treinado para operar sem depender de improviso, transformando atendimento em lucro.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="group relative flex items-center justify-center gap-3 py-4 px-8 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark rounded-none font-bold text-lg uppercase tracking-wider transition-all duration-300 overflow-hidden">
+                        <div class="absolute inset-0 w-full h-full bg-white/30 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
+                        <i class="fa-brands fa-whatsapp text-2xl relative z-10"></i>
+                        <span class="relative z-10">Solicitar Consultoria</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Coluna Imagem (Foto Profissional + Badges) -->
+            <div class="relative w-full max-w-md mx-auto lg:ml-auto reveal-right">
+                <!-- Fundo decorativo -->
+                <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-30 rounded-full"></div>
+                
+                <!-- Foto Principal -->
+                <img src="FotoProfissional.JPG" alt="Daniel Soldá" class="relative z-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 w-full object-cover grayscale-[20%] contrast-125">
+                
+                <!-- Badge Kommo Partner (Flutuando sobre a foto) -->
+                <div class="absolute -bottom-8 -left-8 md:-left-12 z-20 animate-float bg-white p-2 rounded-xl shadow-2xl border border-gray-200">
+                    <img src="Badge%20light.png" alt="Kommo Partner" class="h-16 md:h-20 object-contain">
+                </div>
+
+                <!-- Elemento Flutuante Secundário -->
+                <div class="absolute top-10 -right-6 z-20 animate-float-delayed glass-card px-4 py-3 rounded-xl border-brand-gold/30 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-bold uppercase">Meta de Vendas</p>
+                        <p class="text-sm text-white font-black">Atingida <i class="fa-solid fa-check text-green-400 ml-1"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Autoridade Kommo -->
+    <div class="w-full bg-brand-surface border-y border-white/5 py-8 reveal">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+            <span class="text-gray-500 font-bold uppercase tracking-[0.2em] text-sm text-center">Especialista e Parceiro Oficial</span>
+            <img src="image_50c401.png" alt="Kommo CRM" class="h-10 md:h-12 invert-white animate-pulse" style="animation-duration: 4s;">
+        </div>
+    </div>
+
+    <!-- Problemas Section (Dores) -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">O SEU COMERCIAL <br><span class="text-red-500">ESTÁ VAZANDO DINHEIRO?</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-10 rounded-none border-t-4 border-t-red-500 hover:-translate-y-2 transition-transform duration-300 reveal">
+                <i class="fa-solid fa-comments text-4xl text-red-500 mb-6"></i>
+                <h4 class="text-xl font-black text-white mb-4 uppercase">Bagunça Operacional</h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">WhatsApp pessoal e direct misturados. Ninguém sabe "em que pé" está o lead e o follow-up é feito totalmente no improviso.</p>
+            </div>
+            <div class="glass-card p-10 rounded-none border-t-4 border-t-orange-500 hover:-translate-y-2 transition-transform duration-300 reveal delay-100">
+                <i class="fa-solid fa-filter-circle-xmark text-4xl text-orange-500 mb-6"></i>
+                <h4 class="text-xl font-black text-white mb-4 uppercase">Baixa Conversão</h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">O lead entra, esfria e some. Falta cadência, não existe repescagem estruturada e sua equipe não tem SLAs ou tarefas automáticas.</p>
+            </div>
+            <div class="glass-card p-10 rounded-none border-t-4 border-t-brand-gold hover:-translate-y-2 transition-transform duration-300 reveal delay-200">
+                <i class="fa-solid fa-chart-pie text-4xl text-brand-gold mb-6"></i>
+                <h4 class="text-xl font-black text-white mb-4 uppercase">Gestão às Cegas</h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Você não sabe quantos leads viraram vendas. Não há leitura por canal ou atendente. A gestão é baseada em "sensação", não em dados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que eu entrego Section -->
+    <section class="py-24 px-4 bg-brand-surface relative overflow-hidden">
+        <!-- Detalhe de fundo -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/5 skew-x-12 translate-x-1/4"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+                <div class="max-w-2xl">
+                    <h3 class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">A Solução Definitiva</h3>
+                    <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">O QUE EU ENTREGO <br>PARA O SEU NEGÓCIO</h2>
+                </div>
+                <p class="text-gray-400 max-w-sm border-l-2 border-brand-gold pl-4 text-sm font-medium">
+                    Meu foco não é só "instalar CRM". É fazer o Kommo virar uma operação rentável, com uso real no dia a dia pela sua equipe.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cards minimalistas -->
+                <div class="bg-brand-dark p-8 border border-white/5 hover:border-brand-gold/50 transition-colors reveal">
+                    <div class="w-12 h-12 bg-brand-gold/10 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Arquitetura CRM</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Funis desenhados por objetivo, etapas claras, campos padronizados e rotinas para execução impecável.</p>
+                </div>
+                
+                <div class="bg-brand-dark p-8 border border-white/5 hover:border-brand-gold/50 transition-colors reveal delay-100">
+                    <div class="w-12 h-12 bg-brand-gold/10 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Automação Real</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Cadências, criação de tarefas, alertas de leads parados e avanço de etapas sem depender de cliques humanos.</p>
+                </div>
+                
+                <div class="bg-brand-dark p-8 border border-white/5 hover:border-brand-gold/50 transition-colors reveal delay-200">
+                    <div class="w-12 h-12 bg-brand-gold/10 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Integrações</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">O Kommo conectado perfeitamente ao WhatsApp, Instagram Direct, planilhas e Make.</p>
+                </div>
+                
+                <div class="bg-brand-dark p-8 border border-white/5 hover:border-brand-gold/50 transition-colors reveal delay-300">
+                    <div class="w-12 h-12 bg-brand-gold/10 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Dados & Treino</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Dashboards de performance para a gestão e treinamento intensivo para adoção real por parte da equipe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodologia (O Passo a Passo) -->
+    <section class="py-24 px-4 max-w-5xl mx-auto">
+        <div class="text-center mb-20 reveal">
+            <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">COMO FUNCIONA <br><span class="gold-gradient-text">A EXECUÇÃO</span></h2>
+        </div>
+
+        <div class="relative border-l border-white/10 ml-4 md:ml-0 space-y-12">
+            <!-- Step 1 -->
+            <div class="relative pl-8 md:pl-0 reveal-left">
+                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right md:pr-12 md:relative">
+                        <div class="hidden md:block absolute -right-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
+                        <span class="text-brand-gold font-black text-6xl opacity-20 absolute -top-8 right-12 md:-right-4">01</span>
+                        <h4 class="text-2xl font-black text-white uppercase mb-2">Kickoff & Mapeamento</h4>
+                        <p class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-4">Sales Model Canvas</p>
+                    </div>
+                    <div class="glass-card p-6 border-l-4 border-l-brand-gold">
+                        <p class="text-gray-400 text-sm leading-relaxed">Mapeamos sua operação de ponta a ponta: como chegam os leads, etapas reais, gargalos, regras e indicadores. Daqui sai o "modelo de vendas" e o funil ideal do seu negócio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative pl-8 md:pl-0 reveal-right">
+                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="md:col-start-2 md:pl-12 md:relative">
+                        <div class="hidden md:block absolute -left-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
+                        <span class="text-brand-gold font-black text-6xl opacity-20 absolute -top-8 left-12 md:-left-4">02</span>
+                        <h4 class="text-2xl font-black text-white uppercase mb-2">Engenharia Kommo</h4>
+                        <p class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-4">Construção da Plataforma</p>
+                    </div>
+                    <div class="glass-card p-6 border-l-4 border-l-brand-gold md:col-start-1 md:row-start-1">
+                        <p class="text-gray-400 text-sm leading-relaxed">Configuro tudo rigorosamente baseado no que foi definido no Kickoff: funis, etapas, campos customizados, regras de negócio e estrutura para dar escala e previsibilidade à operação.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative pl-8 md:pl-0 reveal-left">
+                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right md:pr-12 md:relative">
+                        <div class="hidden md:block absolute -right-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
+                        <span class="text-brand-gold font-black text-6xl opacity-20 absolute -top-8 right-12 md:-right-4">03</span>
+                        <h4 class="text-2xl font-black text-white uppercase mb-2">Imersão & Treino</h4>
+                        <p class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-4">Ciclo de Capacitação</p>
+                    </div>
+                    <div class="glass-card p-6 border-l-4 border-l-brand-gold space-y-4">
+                        <div class="pb-3 border-b border-white/5">
+                            <strong class="text-white block text-sm uppercase mb-1"><i class="fa-solid fa-users text-brand-gold w-5"></i> T1: Metodologia:</strong>
+                            <span class="text-gray-400 text-xs">Rotina certa de condução do lead e registro.</span>
+                        </div>
+                        <div class="pb-3 border-b border-white/5">
+                            <strong class="text-white block text-sm uppercase mb-1"><i class="fa-solid fa-bolt text-brand-gold w-5"></i> T2: Automações:</strong>
+                            <span class="text-gray-400 text-xs">Cenário atual + autonomia para o dia a dia.</span>
+                        </div>
+                        <div>
+                            <strong class="text-white block text-sm uppercase mb-1"><i class="fa-solid fa-chart-pie text-brand-gold w-5"></i> T3: Análise Comercial:</strong>
+                            <span class="text-gray-400 text-xs">Gestão por dentro do CRM (gargalos e conversão).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative pl-8 md:pl-0 reveal-right">
+                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="md:col-start-2 md:pl-12 md:relative">
+                        <div class="hidden md:block absolute -left-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
+                        <span class="text-brand-gold font-black text-6xl opacity-20 absolute -top-8 left-12 md:-left-4">04</span>
+                        <h4 class="text-2xl font-black text-white uppercase mb-2">Governança</h4>
+                        <p class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-4">Acompanhamento Final</p>
+                    </div>
+                    <div class="glass-card p-6 border-l-4 border-l-brand-gold md:col-start-1 md:row-start-1">
+                        <p class="text-gray-400 text-sm leading-relaxed">2 reuniões táticas para garantir o funcionamento da máquina e realizar melhorias finas. Entrega de um dashboard executivo personalizado para tomada de decisão.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos de Serviços (Pricing G4 Style) -->
+    <section class="py-24 px-4 bg-black/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">MODELOS DE <br><span class="gold-gradient-text">INVESTIMENTO</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Plano 1 -->
+                <div class="bg-brand-surface border border-white/5 p-8 rounded-none reveal">
+                    <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Setup Básico</h4>
+                    <h3 class="text-2xl font-black text-white mb-6 uppercase">Implementação</h3>
+                    <div class="text-4xl font-black text-white mb-8">R$ 600</div>
+                    <ul class="space-y-4 text-sm text-gray-400 font-medium mb-10">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> Setup da conta</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> Estrutura inicial do funil</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> Conexão WhatsApp/Insta</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> 1 Treinamento básico</li>
+                    </ul>
+                </div>
+
+                <!-- Plano Principal (Destaque) -->
+                <div class="bg-brand-dark border border-brand-gold p-10 transform md:-translate-y-4 shadow-[0_0_40px_rgba(197,163,101,0.15)] relative reveal delay-100">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark px-6 py-1.5 font-black uppercase tracking-widest text-xs">
+                        Escopo Completo
+                    </div>
+                    <h4 class="text-sm font-bold text-brand-gold uppercase tracking-widest mb-2">Projeto Premium</h4>
+                    <h3 class="text-3xl font-black text-white mb-4 uppercase">Consultoria CRM</h3>
+                    
+                    <div class="mb-8 mt-4">
+                        <div class="text-5xl font-black gold-gradient-text">R$ 3.200</div>
+                    </div>
+                    
+                    <ul class="space-y-4 text-sm text-white font-medium mb-10">
+                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Todo o escopo de implementação</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Automações avançadas</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Integrações (Sheets, Make)</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>3 Treinamentos + 2 Reuniões</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Dashboard de Gestão Próprio</span></li>
+                    </ul>
+                    
+                    <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="block w-full text-center py-4 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark font-black uppercase tracking-widest transition-colors">
+                        Iniciar Consultoria
+                    </a>
+                </div>
+
+                <!-- Plano 3 -->
+                <div class="bg-brand-surface border border-white/5 p-8 rounded-none reveal delay-200">
+                    <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Evolução</h4>
+                    <h3 class="text-2xl font-black text-white mb-6 uppercase">Suporte Mensal</h3>
+                    <div class="text-3xl font-black text-white mb-8">A partir de R$ 380<span class="text-sm text-gray-500 font-medium">/mês</span></div>
+                    <ul class="space-y-4 text-sm text-gray-400 font-medium mb-10">
+                        <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-brand-gold mr-3"></i> Para operações já ativas</li>
+                        <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-brand-gold mr-3"></i> Melhorias de funil</li>
+                        <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-brand-gold mr-3"></i> Manutenção de integrações</li>
+                        <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-brand-gold mr-3"></i> Suporte à equipe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Final (Removido o form, adicionado WhatsApp) -->
+    <section class="py-24 px-4 max-w-5xl mx-auto text-center reveal">
+        <div class="glass-card p-10 md:p-16 rounded-none relative border-t-8 border-t-brand-gold overflow-hidden">
+            <!-- Efeito de luz no fundo -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-gold/10 blur-[100px] rounded-full"></div>
+            
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight relative z-10">ASSUMA O CONTROLE <br>DO SEU COMERCIAL</h2>
+            
+            <p class="text-lg text-gray-300 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-medium">
+                "Se você me disser como hoje chegam os leads e como vocês os atendem, eu já te retorno com o desenho do caminho ideal para escalar suas vendas com controle absoluto."
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
+                <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" 
+                   target="_blank" 
+                   class="group flex items-center justify-center gap-3 py-5 px-10 bg-green-600 hover:bg-green-500 text-white font-black text-lg uppercase tracking-widest transition-all duration-300 shadow-[0_0_30px_rgba(22,163,74,0.3)] hover:shadow-[0_0_50px_rgba(22,163,74,0.5)]">
+                    <i class="fa-brands fa-whatsapp text-2xl animate-pulse"></i>
+                    <span>Chamar no WhatsApp</span>
+                </a>
+                
+                <a href="https://youtube.com/@crmproospecta?si=xZwPzwtl58rPxD8O" 
+                   target="_blank" 
+                   class="flex items-center justify-center gap-3 py-5 px-10 bg-transparent border border-gray-600 text-gray-300 hover:text-white hover:border-brand-gold transition-all duration-300 font-bold uppercase tracking-wider">
+                    <i class="fa-brands fa-youtube text-xl text-red-500"></i>
+                    <span>Ver YouTube</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="py-10 border-t border-white/10 text-center text-xs font-bold uppercase tracking-widest text-gray-600 bg-brand-dark w-full">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-4">
+            <span>Atendimento Remoto (Ibiúna - SP)</span>
+            <span class="hidden md:inline">•</span>
+            <span class="flex items-center gap-2">
+                Parceiro Oficial <img src="image_50c401.png" class="h-4 invert-white opacity-50" alt="Kommo">
+            </span>
+        </div>
+        <p>&copy; 2026 Daniel Soldá. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts (Typewriter + Scroll Reveal) -->
+    <script>
+        // 1. Efeito Typewriter
+        const phrases = [
+            "Gestor de Automação",
+            "Domínio em IA para Atendimentos",
+            "Especialista em Funis de Vendas",
+            "Processos Comerciais"
+        ];
+        
+        let currentPhraseIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        const typewriterElement = document.getElementById('typewriter');
+        
+        function type() {
+            const currentPhrase = phrases[currentPhraseIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+            }
+            
+            let typeSpeed = isDeleting ? 30 : 70;
+            
+            if (!isDeleting && currentCharIndex === currentPhrase.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } 
+            else if (isDeleting && currentCharIndex === 0) {
+                isDeleting = false;
+                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                typeSpeed = 400;
+            }
+            
+            setTimeout(type, typeSpeed);
+        }
+
+        // 2. Animações de Scroll (Intersection Observer)
+        function initScrollAnimations() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // Dispara quando 15% do elemento estiver visível
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Opcional: Descomentar a linha abaixo se quiser que a animação ocorra apenas uma vez
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            // Seleciona todos os elementos com as classes de reveal
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            revealElements.forEach(el => observer.observe(el));
+        }
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            // Inicia Typewriter
+            if(typewriterElement) setTimeout(type, 500);
+            
+            // Inicia Scroll Reveal
+            initScrollAnimations();
+        });
+    </script>
+</body>
+</html>
