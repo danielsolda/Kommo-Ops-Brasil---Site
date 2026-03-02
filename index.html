@@ -114,19 +114,19 @@
             transform: translateX(0);
         }
 
-        /* Ajuste para logo escuro da Kommo ficar branco no fundo escuro */
-        .invert-white {
-            filter: brightness(0) invert(1);
-            opacity: 0.9;
+        /* NOVO: Truque para remover fundo branco de logos e torná-las brancas */
+        .kommo-logo-blend {
+            filter: invert(1);
+            mix-blend-mode: screen;
         }
     </style>
 </head>
 <body class="text-gray-200 antialiased selection:bg-brand-gold selection:text-brand-dark">
 
     <!-- Navegação Minimalista -->
-    <nav class="w-full absolute top-0 left-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto right-0 reveal">
-        <div class="text-xl md:text-2xl font-black tracking-tighter text-white uppercase">
-            KOMMO OPS BRASIL<span class="text-brand-gold block text-xs md:text-sm font-bold tracking-widest mt-1 opacity-80">- Por Daniel Ribeiro</span>
+    <nav class="w-full absolute top-0 left-0 z-50 p-4 md:p-6 flex justify-between items-center max-w-7xl mx-auto right-0 reveal">
+        <div class="text-lg md:text-2xl font-black tracking-tighter text-white uppercase leading-none">
+            KOMMO OPS BRASIL<span class="text-brand-gold block text-[10px] md:text-sm font-bold tracking-widest mt-1 opacity-80">- Por Daniel Ribeiro</span>
         </div>
         <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="hidden md:flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-gold hover:text-white transition-colors">
             Falar com Especialista <i class="fa-solid fa-arrow-right"></i>
@@ -144,23 +144,23 @@
                     Transformação Comercial
                 </div>
                 
-                <h1 class="text-5xl lg:text-7xl font-black tracking-tight mb-4 text-white leading-[1.1]">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-4 text-white leading-[1.1]">
                     VENDAS COM <br>
                     <span class="gold-gradient-text">PREVISIBILIDADE.</span>
                 </h1>
                 
                 <!-- Typewriter -->
-                <div class="text-xl md:text-2xl font-semibold text-gray-400 mb-6 h-8 flex items-center">
+                <div class="text-lg md:text-2xl font-semibold text-gray-400 mb-6 min-h-[3.5rem] md:min-h-0 flex items-center">
                     <i class="fa-solid fa-angle-right text-brand-gold mr-3"></i>
                     <span id="typewriter" class="text-white"></span><span class="animate-pulse text-brand-gold ml-1">|</span>
                 </div>
                 
-                <p class="text-lg text-gray-400 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/30 pl-4">
+                <p class="text-base md:text-lg text-gray-400 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/30 pl-4">
                     Implemento e otimizo sua operação no <strong class="text-white">KommoCRM</strong>. Deixo seu time treinado para operar sem depender de improviso, transformando atendimento em lucro.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="group relative flex items-center justify-center gap-3 py-4 px-8 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark rounded-none font-bold text-lg uppercase tracking-wider transition-all duration-300 overflow-hidden">
+                    <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="group relative flex items-center justify-center gap-3 py-4 px-6 md:px-8 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark rounded-none font-bold text-base md:text-lg uppercase tracking-wider transition-all duration-300 overflow-hidden w-full sm:w-auto text-center">
                         <div class="absolute inset-0 w-full h-full bg-white/30 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                         <i class="fa-brands fa-whatsapp text-2xl relative z-10"></i>
                         <span class="relative z-10">Solicitar Consultoria</span>
@@ -169,26 +169,28 @@
             </div>
 
             <!-- Coluna Imagem (Foto Profissional + Badges) -->
-            <div class="relative w-full max-w-md mx-auto lg:ml-auto reveal-right">
+            <!-- Adicionado min-h para garantir que o layout não quebra se a foto demorar a carregar -->
+            <div class="relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-16 lg:mt-0 min-h-[350px] md:min-h-[500px] flex items-center">
                 <!-- Fundo decorativo -->
                 <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-30 rounded-full"></div>
                 
                 <!-- Foto Principal -->
-                <img src="FotoProfissional.JPG" alt="Daniel Soldá" class="relative z-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 w-full object-cover grayscale-[20%] contrast-125">
+                <img src="FotoProfissional.JPG" alt="Daniel Soldá" class="relative z-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 w-full object-cover grayscale-[20%] contrast-125 bg-brand-surface/50">
                 
                 <!-- Badge Kommo Partner (Flutuando sobre a foto) -->
-                <div class="absolute -bottom-8 -left-8 md:-left-12 z-20 animate-float bg-white p-2 rounded-xl shadow-2xl border border-gray-200">
-                    <img src="Badge%20light.png" alt="Kommo Partner" class="h-16 md:h-20 object-contain">
+                <div class="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-12 z-20 animate-float bg-white p-1.5 md:p-2 rounded-xl shadow-2xl border border-gray-200 scale-90 md:scale-100 min-w-[120px]">
+                    <!-- Removido o %20, deixado o nome natural para tentar forçar o reconhecimento -->
+                    <img src="Badge light.png" alt="Kommo Partner" class="h-12 md:h-20 w-full object-contain">
                 </div>
 
                 <!-- Elemento Flutuante Secundário -->
-                <div class="absolute top-10 -right-6 z-20 animate-float-delayed glass-card px-4 py-3 rounded-xl border-brand-gold/30 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                <div class="absolute top-4 -right-2 md:top-10 md:-right-6 z-20 animate-float-delayed glass-card px-3 py-2 md:px-4 md:py-3 rounded-xl border-brand-gold/30 flex items-center gap-2 md:gap-3 scale-75 md:scale-100 origin-top-right">
+                    <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-sm md:text-base">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
                     <div>
-                        <p class="text-xs text-gray-400 font-bold uppercase">Meta de Vendas</p>
-                        <p class="text-sm text-white font-black">Atingida <i class="fa-solid fa-check text-green-400 ml-1"></i></p>
+                        <p class="text-[10px] md:text-xs text-gray-400 font-bold uppercase">Meta de Vendas</p>
+                        <p class="text-xs md:text-sm text-white font-black">Atingida <i class="fa-solid fa-check text-green-400 ml-1"></i></p>
                     </div>
                 </div>
             </div>
@@ -199,28 +201,29 @@
     <div class="w-full bg-brand-surface border-y border-white/5 py-8 reveal">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
             <span class="text-gray-500 font-bold uppercase tracking-[0.2em] text-sm text-center">Especialista e Parceiro Oficial</span>
-            <img src="image_50c401.png" alt="Kommo CRM" class="h-10 md:h-12 invert-white animate-pulse" style="animation-duration: 4s;">
+            <!-- Adicionada a nova classe kommo-logo-blend -->
+            <img src="image_50c401.png" alt="Kommo CRM" class="h-10 md:h-12 kommo-logo-blend animate-pulse" style="animation-duration: 4s;">
         </div>
     </div>
 
     <!-- Problemas Section (Dores) -->
     <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center mb-16 reveal">
-            <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">O SEU COMERCIAL <br><span class="text-red-500">ESTÁ VAZANDO DINHEIRO?</span></h2>
+            <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">O SEU COMERCIAL <br><span class="text-red-500">ESTÁ VAZANDO DINHEIRO?</span></h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-10 rounded-none border-t-4 border-t-red-500 hover:-translate-y-2 transition-transform duration-300 reveal">
+            <div class="glass-card p-6 md:p-10 rounded-none border-t-4 border-t-red-500 hover:-translate-y-2 transition-transform duration-300 reveal">
                 <i class="fa-solid fa-comments text-4xl text-red-500 mb-6"></i>
                 <h4 class="text-xl font-black text-white mb-4 uppercase">Bagunça Operacional</h4>
                 <p class="text-gray-400 text-sm leading-relaxed mb-4">WhatsApp pessoal e direct misturados. Ninguém sabe "em que pé" está o lead e o follow-up é feito totalmente no improviso.</p>
             </div>
-            <div class="glass-card p-10 rounded-none border-t-4 border-t-orange-500 hover:-translate-y-2 transition-transform duration-300 reveal delay-100">
+            <div class="glass-card p-6 md:p-10 rounded-none border-t-4 border-t-orange-500 hover:-translate-y-2 transition-transform duration-300 reveal delay-100">
                 <i class="fa-solid fa-filter-circle-xmark text-4xl text-orange-500 mb-6"></i>
                 <h4 class="text-xl font-black text-white mb-4 uppercase">Baixa Conversão</h4>
                 <p class="text-gray-400 text-sm leading-relaxed mb-4">O lead entra, esfria e some. Falta cadência, não existe repescagem estruturada e sua equipe não tem SLAs ou tarefas automáticas.</p>
             </div>
-            <div class="glass-card p-10 rounded-none border-t-4 border-t-brand-gold hover:-translate-y-2 transition-transform duration-300 reveal delay-200">
+            <div class="glass-card p-6 md:p-10 rounded-none border-t-4 border-t-brand-gold hover:-translate-y-2 transition-transform duration-300 reveal delay-200">
                 <i class="fa-solid fa-chart-pie text-4xl text-brand-gold mb-6"></i>
                 <h4 class="text-xl font-black text-white mb-4 uppercase">Gestão às Cegas</h4>
                 <p class="text-gray-400 text-sm leading-relaxed mb-4">Você não sabe quantos leads viraram vendas. Não há leitura por canal ou atendente. A gestão é baseada em "sensação", não em dados.</p>
@@ -294,9 +297,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="md:text-right md:pr-12 md:relative">
                         <div class="hidden md:block absolute -right-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
-                        <span class="text-brand-gold font-black text-6xl opacity-20 absolute -top-8 right-12 md:-right-4">01</span>
-                        <h4 class="text-2xl font-black text-white uppercase mb-2">Kickoff & Mapeamento</h4>
-                        <p class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-4">Sales Model Canvas</p>
+                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-20 absolute -top-6 right-4 md:-top-8 md:-right-4">01</span>
+                        <h4 class="text-xl md:text-2xl font-black text-white uppercase mb-2">Kickoff & Mapeamento</h4>
+                        <p class="text-brand-gold text-xs md:text-sm font-bold uppercase tracking-wider mb-4">Sales Model Canvas</p>
                     </div>
                     <div class="glass-card p-6 border-l-4 border-l-brand-gold">
                         <p class="text-gray-400 text-sm leading-relaxed">Mapeamos sua operação de ponta a ponta: como chegam os leads, etapas reais, gargalos, regras e indicadores. Daqui sai o "modelo de vendas" e o funil ideal do seu negócio.</p>
@@ -310,9 +313,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="md:col-start-2 md:pl-12 md:relative">
                         <div class="hidden md:block absolute -left-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
-                        <span class="text-brand-gold font-black text-6xl opacity-20 absolute -top-8 left-12 md:-left-4">02</span>
-                        <h4 class="text-2xl font-black text-white uppercase mb-2">Engenharia Kommo</h4>
-                        <p class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-4">Construção da Plataforma</p>
+                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-20 absolute -top-6 left-4 md:-top-8 md:-left-4">02</span>
+                        <h4 class="text-xl md:text-2xl font-black text-white uppercase mb-2">Engenharia Kommo</h4>
+                        <p class="text-brand-gold text-xs md:text-sm font-bold uppercase tracking-wider mb-4">Construção da Plataforma</p>
                     </div>
                     <div class="glass-card p-6 border-l-4 border-l-brand-gold md:col-start-1 md:row-start-1">
                         <p class="text-gray-400 text-sm leading-relaxed">Configuro tudo rigorosamente baseado no que foi definido no Kickoff: funis, etapas, campos customizados, regras de negócio e estrutura para dar escala e previsibilidade à operação.</p>
@@ -326,9 +329,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="md:text-right md:pr-12 md:relative">
                         <div class="hidden md:block absolute -right-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
-                        <span class="text-brand-gold font-black text-6xl opacity-20 absolute -top-8 right-12 md:-right-4">03</span>
-                        <h4 class="text-2xl font-black text-white uppercase mb-2">Imersão & Treino</h4>
-                        <p class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-4">Ciclo de Capacitação</p>
+                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-20 absolute -top-6 right-4 md:-top-8 md:-right-4">03</span>
+                        <h4 class="text-xl md:text-2xl font-black text-white uppercase mb-2">Imersão & Treino</h4>
+                        <p class="text-brand-gold text-xs md:text-sm font-bold uppercase tracking-wider mb-4">Ciclo de Capacitação</p>
                     </div>
                     <div class="glass-card p-6 border-l-4 border-l-brand-gold space-y-4">
                         <div class="pb-3 border-b border-white/5">
@@ -353,9 +356,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="md:col-start-2 md:pl-12 md:relative">
                         <div class="hidden md:block absolute -left-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
-                        <span class="text-brand-gold font-black text-6xl opacity-20 absolute -top-8 left-12 md:-left-4">04</span>
-                        <h4 class="text-2xl font-black text-white uppercase mb-2">Governança</h4>
-                        <p class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-4">Acompanhamento Final</p>
+                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-20 absolute -top-6 left-4 md:-top-8 md:-left-4">04</span>
+                        <h4 class="text-xl md:text-2xl font-black text-white uppercase mb-2">Governança</h4>
+                        <p class="text-brand-gold text-xs md:text-sm font-bold uppercase tracking-wider mb-4">Acompanhamento Final</p>
                     </div>
                     <div class="glass-card p-6 border-l-4 border-l-brand-gold md:col-start-1 md:row-start-1">
                         <p class="text-gray-400 text-sm leading-relaxed">2 reuniões táticas para garantir o funcionamento da máquina e realizar melhorias finas. Entrega de um dashboard executivo personalizado para tomada de decisão.</p>
@@ -369,15 +372,15 @@
     <section class="py-24 px-4 bg-black/40">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">MODELOS DE <br><span class="gold-gradient-text">INVESTIMENTO</span></h2>
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">MODELOS DE <br><span class="gold-gradient-text">INVESTIMENTO</span></h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 <!-- Plano 1 -->
-                <div class="bg-brand-surface border border-white/5 p-8 rounded-none reveal">
+                <div class="bg-brand-surface border border-white/5 p-6 md:p-8 rounded-none reveal">
                     <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Setup Básico</h4>
-                    <h3 class="text-2xl font-black text-white mb-6 uppercase">Implementação</h3>
-                    <div class="text-4xl font-black text-white mb-8">R$ 600</div>
+                    <h3 class="text-xl md:text-2xl font-black text-white mb-6 uppercase">Implementação</h3>
+                    <div class="text-3xl md:text-4xl font-black text-white mb-8">R$ 600</div>
                     <ul class="space-y-4 text-sm text-gray-400 font-medium mb-10">
                         <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> Setup da conta</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> Estrutura inicial do funil</li>
@@ -387,18 +390,18 @@
                 </div>
 
                 <!-- Plano Principal (Destaque) -->
-                <div class="bg-brand-dark border border-brand-gold p-10 transform md:-translate-y-4 shadow-[0_0_40px_rgba(197,163,101,0.15)] relative reveal delay-100">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark px-6 py-1.5 font-black uppercase tracking-widest text-xs">
+                <div class="bg-brand-dark border border-brand-gold p-6 md:p-10 transform md:-translate-y-4 shadow-[0_0_40px_rgba(197,163,101,0.15)] relative reveal delay-100">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark px-6 py-1.5 font-black uppercase tracking-widest text-[10px] md:text-xs whitespace-nowrap">
                         Escopo Completo
                     </div>
-                    <h4 class="text-sm font-bold text-brand-gold uppercase tracking-widest mb-2">Projeto Premium</h4>
-                    <h3 class="text-3xl font-black text-white mb-4 uppercase">Consultoria CRM</h3>
+                    <h4 class="text-xs md:text-sm font-bold text-brand-gold uppercase tracking-widest mb-2">Projeto Premium</h4>
+                    <h3 class="text-2xl md:text-3xl font-black text-white mb-4 uppercase">Consultoria CRM</h3>
                     
                     <div class="mb-8 mt-4">
-                        <div class="text-5xl font-black gold-gradient-text">R$ 3.200</div>
+                        <div class="text-4xl md:text-5xl font-black gold-gradient-text">R$ 3.200</div>
                     </div>
                     
-                    <ul class="space-y-4 text-sm text-white font-medium mb-10">
+                    <ul class="space-y-4 text-xs md:text-sm text-white font-medium mb-10">
                         <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Todo o escopo de implementação</span></li>
                         <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Automações avançadas</span></li>
                         <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Integrações (Sheets, Make)</span></li>
@@ -463,7 +466,7 @@
             <span>Atendimento Remoto (Ibiúna - SP)</span>
             <span class="hidden md:inline">•</span>
             <span class="flex items-center gap-2">
-                Parceiro Oficial <img src="image_50c401.png" class="h-4 invert-white opacity-50" alt="Kommo">
+                Parceiro Oficial <img src="image_50c401.png" class="h-4 kommo-logo-blend opacity-70" alt="Kommo">
             </span>
         </div>
         <p>&copy; 2026 Daniel Soldá. Todos os direitos reservados.</p>
