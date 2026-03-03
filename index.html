@@ -124,23 +124,24 @@
 <body class="text-gray-200 antialiased selection:bg-brand-gold selection:text-brand-dark">
 
     <!-- Navegação Minimalista -->
-    <nav class="w-full absolute top-0 left-0 z-50 p-4 md:p-6 flex justify-between items-center max-w-7xl mx-auto right-0 reveal">
-        <div class="text-lg md:text-2xl font-black tracking-tighter text-white uppercase leading-none">
-            KOMMO OPS BRASIL<span class="text-brand-gold block text-[10px] md:text-sm font-bold tracking-widest mt-1 opacity-80">- Por Daniel Ribeiro</span>
+    <nav class="w-full absolute top-0 left-0 z-50 p-4 md:p-6 flex justify-between items-start max-w-7xl mx-auto right-0 reveal">
+        <!-- Logo Text aumentado -->
+        <div class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tighter text-white uppercase leading-tight">
+            KOMMO OPS BRASIL<span class="text-brand-gold block text-xs md:text-sm font-bold tracking-widest mt-1 opacity-80">- Por Daniel Ribeiro</span>
         </div>
-        <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="hidden md:flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-gold hover:text-white transition-colors">
+        <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="hidden md:flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-gold hover:text-white transition-colors mt-2">
             Falar com Especialista <i class="fa-solid fa-arrow-right"></i>
         </a>
     </nav>
 
     <!-- Hero Section (Estilo G4: Split Screen) -->
-    <header class="relative pt-28 md:pt-32 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[85vh] flex flex-col justify-center">
+    <header class="relative pt-32 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[85vh] flex flex-col justify-center">
         <!-- Gap reduzido no mobile de gap-12 para gap-8 -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
             
             <!-- Coluna Texto -->
             <div class="z-10 reveal-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 mt-4 md:mt-0">
                     <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                     Transformação Comercial
                 </div>
@@ -171,8 +172,8 @@
             </div>
 
             <!-- Coluna Imagem (Foto Profissional + Badges) -->
-            <!-- mt-16 reduzido para mt-6 no mobile para puxar a foto para cima -->
-            <div class="relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] flex items-center">
+            <!-- ADICIONADO: hidden md:flex -> Isso oculta completamente esta coluna no mobile -->
+            <div class="hidden md:flex relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] items-center">
                 <!-- Fundo decorativo -->
                 <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-30 rounded-full"></div>
                 
