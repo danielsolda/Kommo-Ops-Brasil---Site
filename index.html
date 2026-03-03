@@ -125,9 +125,9 @@
 
     <!-- Navegação Minimalista -->
     <nav class="w-full absolute top-0 left-0 z-50 p-4 md:p-6 flex justify-between items-start max-w-7xl mx-auto right-0 reveal">
-        <!-- Logo Text aumentado -->
-        <div class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tighter text-white uppercase leading-tight">
-            KOMMO OPS BRASIL<span class="text-brand-gold block text-xs md:text-sm font-bold tracking-widest mt-1 opacity-80">- Por Daniel Ribeiro</span>
+        <!-- Logo Text aumentado com tipografia fluida no mobile -->
+        <div class="text-[7.5vw] sm:text-4xl md:text-4xl font-black tracking-tighter text-white uppercase leading-[0.9]">
+            KOMMO OPS BRASIL<span class="text-brand-gold block text-[3.5vw] sm:text-sm font-bold tracking-widest mt-1 opacity-80">- Por Daniel Ribeiro</span>
         </div>
         <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="hidden md:flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-gold hover:text-white transition-colors mt-2">
             Falar com Especialista <i class="fa-solid fa-arrow-right"></i>
@@ -135,25 +135,26 @@
     </nav>
 
     <!-- Hero Section (Estilo G4: Split Screen) -->
-    <header class="relative pt-32 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[85vh] flex flex-col justify-center">
-        <!-- Gap reduzido no mobile de gap-12 para gap-8 -->
+    <!-- pt-24 "puxa" o conteúdo bem mais para cima no mobile -->
+    <header class="relative pt-24 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center">
+        
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
             
             <!-- Coluna Texto -->
             <div class="z-10 reveal-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 mt-4 md:mt-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 mt-6 md:mt-0">
                     <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                     Transformação Comercial
                 </div>
                 
-                <!-- Tamanho do texto aumentado no mobile para text-5xl e tracking ajustado -->
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-4 text-white leading-[1.05]">
-                    VENDAS COM <br>
-                    <span class="gold-gradient-text">PREVISIBILIDADE.</span>
+                <!-- Tamanho GIGANTE no mobile usando VW para preencher a tela inteira sem quebrar -->
+                <h1 class="font-black tracking-tighter mb-4 text-white flex flex-col leading-[0.9]">
+                    <span class="text-[13.5vw] sm:text-6xl lg:text-7xl">VENDAS COM</span>
+                    <span class="gold-gradient-text text-[9.5vw] sm:text-6xl lg:text-7xl">PREVISIBILIDADE.</span>
                 </h1>
                 
                 <!-- Typewriter -->
-                <div class="text-lg md:text-2xl font-semibold text-gray-400 mb-6 min-h-[3rem] md:min-h-0 flex items-center">
+                <div class="text-lg md:text-2xl font-semibold text-gray-400 mb-8 min-h-[3rem] md:min-h-0 flex items-center">
                     <i class="fa-solid fa-angle-right text-brand-gold mr-3"></i>
                     <span id="typewriter" class="text-white"></span><span class="animate-pulse text-brand-gold ml-1">|</span>
                 </div>
@@ -172,7 +173,7 @@
             </div>
 
             <!-- Coluna Imagem (Foto Profissional + Badges) -->
-            <!-- ADICIONADO: hidden md:flex -> Isso oculta completamente esta coluna no mobile -->
+            <!-- MANTIDO hidden md:flex -> Fica oculta no telemóvel e aparece no PC -->
             <div class="hidden md:flex relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] items-center">
                 <!-- Fundo decorativo -->
                 <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-30 rounded-full"></div>
