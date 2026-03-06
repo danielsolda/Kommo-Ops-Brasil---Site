@@ -415,7 +415,7 @@
         </div>
     </section>
 
-    <!-- Formulário de Aplicação (Substituiu os Planos de Investimento) -->
+    <!-- Formulário de Aplicação -->
     <section id="aplicacao" class="py-24 px-4 bg-brand-dark relative overflow-hidden">
         <!-- Detalhes de Fundo -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/4 pointer-events-none"></div>
@@ -425,7 +425,7 @@
             <div class="text-center mb-12 reveal">
                 <h3 class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">Passo Inicial</h3>
                 <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">APLICAÇÃO PARA <br><span class="gold-gradient-text">CONSULTORIA</span></h2>
-                <p class="text-gray-300 mt-6 max-w-2xl mx-auto font-medium">Preencha os dados abaixo com precisão. Analisarei o cenário da sua empresa e entrarei em contacto para desenharmos a estrutura ideal no KommoCRM.</p>
+                <p class="text-gray-300 mt-6 max-w-2xl mx-auto font-medium">Preencha os dados abaixo com precisão. Analisarei o cenário da sua empresa e entrarei em contato para desenharmos a estrutura ideal no KommoCRM.</p>
             </div>
 
             <!-- Container do Formulário -->
@@ -590,20 +590,22 @@
             </div>
 
             <!-- Mensagem de Sucesso (Oculta Inicialmente) -->
-            <div id="form-success" class="hidden glass-card bg-brand-surface/80 p-10 md:p-16 rounded-2xl border-t-4 border-t-green-500 text-center shadow-[0_0_50px_rgba(34,197,94,0.2)]">
-                <div class="w-20 h-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
+            <div id="form-success" class="hidden glass-card bg-brand-surface/80 p-4 md:p-8 rounded-2xl border-t-4 border-t-green-500 text-center shadow-[0_0_50px_rgba(34,197,94,0.2)]">
+                <div class="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
                     <i class="fa-solid fa-check"></i>
                 </div>
-                <h3 class="text-3xl font-black text-white mb-4 uppercase">Aplicação Recebida!</h3>
-                <p class="text-lg text-gray-300 mb-8 font-medium">Seus dados foram enviados com sucesso. Vou analisar o seu cenário e entrarei em contacto consigo muito em breve.</p>
-                <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="inline-flex items-center justify-center gap-3 py-4 px-8 bg-green-600 hover:bg-green-500 text-white font-bold text-lg uppercase tracking-wider transition-all duration-300 rounded-xl shadow-lg">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i> Chamar no WhatsApp Agora
-                </a>
+                <h3 class="text-2xl md:text-3xl font-black text-white mb-2 uppercase">Aplicação Recebida!</h3>
+                <p class="text-base text-gray-300 mb-6 font-medium">Seus dados foram enviados com sucesso. Vou analisar o seu cenário e entrarei em contato com você muito em breve. <strong class="text-brand-gold block mt-2">Escolha o melhor horário para a nossa reunião abaixo:</strong></p>
+                
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget rounded-xl overflow-hidden" data-url="https://calendly.com/contatodanielsolda/60min" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Final (Removido o form, adicionado WhatsApp) -->
+    <!-- Call to Action Final -->
     <section class="py-24 px-4 max-w-5xl mx-auto text-center reveal">
         <div class="glass-card p-10 md:p-16 rounded-none relative border-t-8 border-t-brand-gold overflow-hidden bg-brand-surface/80">
             <!-- Efeito de luz no fundo -->
