@@ -44,7 +44,6 @@
             overflow-x: hidden;
         }
         
-        /* Efeitos visuais Premium estilo G4 */
         .glass-card {
             background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
             border: 1px solid rgba(255,255,255,0.05);
@@ -59,16 +58,13 @@
             background-clip: text;
         }
 
-        /* Animações CSS (Keyframes) */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
 
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
         
         @keyframes float-delayed {
             0% { transform: translateY(0px); }
@@ -76,48 +72,36 @@
             100% { transform: translateY(0px); }
         }
 
-        .animate-float-delayed {
-            animation: float-delayed 5s ease-in-out infinite 2s;
-        }
+        .animate-float-delayed { animation: float-delayed 5s ease-in-out infinite 2s; }
 
-        /* Classes para o Scroll Reveal (JS) */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
         
-        .reveal-left.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        .reveal-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
 
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
+        .reveal-right { opacity: 0; transform: translateX(50px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
+
+        .kommo-logo-blend { filter: invert(1); mix-blend-mode: screen; }
+
+        /* Estilos do Carrossel de Feedback e Lightbox */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        .reveal-right.active {
-            opacity: 1;
-            transform: translateX(0);
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            /* 30s é a velocidade, quanto menor, mais rápido. 'linear' garante fluidez constante */
+            animation: scroll-carousel 30s linear infinite;
         }
-
-        /* Truque para remover fundo branco de logos e torná-las brancas */
-        .kommo-logo-blend {
-            filter: invert(1);
-            mix-blend-mode: screen;
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll-carousel {
+            0% { transform: translateX(0); }
+            /* Move exatamente metade do comprimento total (já que duplicámos os itens) */
+            100% { transform: translateX(-50%); } 
         }
     </style>
 </head>
@@ -135,31 +119,31 @@
     </nav>
 
     <!-- Hero Section (Estilo G4: Split Screen) -->
-    <!-- pt-24 "puxa" o conteúdo bem mais para cima no mobile -->
-    <header class="relative pt-24 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[75vh] md:min-h-[85vh] flex flex-col justify-center">
+    <!-- pt-32 empurra um pouco para baixo da logo, pb-12 dá espaço em baixo -->
+    <header class="relative pt-32 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[80vh] md:min-h-[85vh] flex flex-col justify-center">
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
             
             <!-- Coluna Texto -->
             <div class="z-10 reveal-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 mt-6 md:mt-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6">
                     <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                     Transformação Comercial
                 </div>
                 
-                <!-- Tamanho GIGANTE no mobile usando VW para preencher a tela inteira sem quebrar -->
-                <h1 class="font-black tracking-tighter mb-4 text-white flex flex-col leading-[0.9]">
-                    <span class="text-[13.5vw] sm:text-6xl lg:text-7xl">VENDAS COM</span>
+                <!-- Tamanho GIGANTE no mobile usando VW -->
+                <h1 class="font-black tracking-tighter mb-4 text-white flex flex-col leading-[0.95]">
+                    <span class="text-[13vw] sm:text-6xl lg:text-7xl">VENDAS COM</span>
                     <span class="gold-gradient-text text-[9.5vw] sm:text-6xl lg:text-7xl">PREVISIBILIDADE.</span>
                 </h1>
                 
                 <!-- Typewriter -->
-                <div class="text-lg md:text-2xl font-semibold text-gray-400 mb-8 min-h-[3rem] md:min-h-0 flex items-center">
+                <div class="text-lg md:text-2xl font-semibold text-gray-400 mb-8 min-h-[3.5rem] md:min-h-0 flex items-center">
                     <i class="fa-solid fa-angle-right text-brand-gold mr-3"></i>
                     <span id="typewriter" class="text-white"></span><span class="animate-pulse text-brand-gold ml-1">|</span>
                 </div>
                 
-                <p class="text-base md:text-lg text-gray-400 max-w-lg leading-relaxed mb-8 border-l-2 border-brand-gold/30 pl-4">
+                <p class="text-base md:text-lg text-gray-400 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/30 pl-4">
                     Implemento e otimizo sua operação no <strong class="text-white">KommoCRM</strong>. Deixo seu time treinado para operar sem depender de improviso, transformando atendimento em lucro.
                 </p>
 
@@ -173,7 +157,7 @@
             </div>
 
             <!-- Coluna Imagem (Foto Profissional + Badges) -->
-            <!-- MANTIDO hidden md:flex -> Fica oculta no telemóvel e aparece no PC -->
+            <!-- AQUI ESTÁ A MAGIA: 'hidden md:flex' ESCONDE A FOTO NO TELEMÓVEL -->
             <div class="hidden md:flex relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] items-center">
                 <!-- Fundo decorativo -->
                 <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-30 rounded-full"></div>
@@ -181,7 +165,7 @@
                 <!-- Foto Principal -->
                 <img src="FotoProfissional.JPG" alt="Daniel Soldá" class="relative z-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 w-full object-cover grayscale-[20%] contrast-125 bg-brand-surface/50">
                 
-                <!-- Badge Kommo Partner (Flutuando sobre a foto) -->
+                <!-- Badge Kommo Partner -->
                 <div class="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-12 z-20 animate-float bg-white p-1.5 md:p-2 rounded-xl shadow-2xl border border-gray-200 scale-90 md:scale-100 min-w-[120px]">
                     <img src="Badge light.png" alt="Kommo Partner" class="h-12 md:h-20 w-full object-contain">
                 </div>
@@ -202,7 +186,6 @@
 
     <!-- Banner Autoridade Kommo -->
     <div class="w-full bg-brand-surface border-y border-white/5 py-8 reveal">
-        <!-- Aumentado o gap e o tamanho da imagem da kommo para h-16 (mobile) e h-24 (desktop) -->
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
             <span class="text-gray-500 font-bold uppercase tracking-[0.2em] text-sm md:text-base text-center">Especialista e Parceiro Oficial</span>
             <img src="image_50c401.png" alt="Kommo CRM" class="h-16 md:h-24 kommo-logo-blend animate-pulse" style="animation-duration: 4s;">
@@ -371,6 +354,49 @@
         </div>
     </section>
 
+    <!-- Cases de Sucesso (Social Proof) -->
+    <section class="py-24 px-0 md:px-4 bg-brand-surface relative overflow-hidden border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 px-4 reveal">
+                <h3 class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">Resultados Reais</h3>
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">O QUE DIZEM <br><span class="gold-gradient-text">NOSSOS CLIENTES</span></h2>
+            </div>
+            
+            <!-- Carrossel de Prints Animado -->
+            <div class="w-full overflow-hidden relative group">
+                <!-- Efeito de sombra (fade) nas laterais para suavizar a entrada e saída das fotos -->
+                <div class="absolute top-0 left-0 w-12 md:w-32 h-full bg-gradient-to-r from-brand-surface to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute top-0 right-0 w-12 md:w-32 h-full bg-gradient-to-l from-brand-surface to-transparent z-10 pointer-events-none"></div>
+                
+                <div class="carousel-track gap-6 px-4 md:px-0">
+                    <!-- Set 1 (Imagens Originais) -->
+                    <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b42c.png')">
+                        <img src="image_97b42c.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 1">
+                    </div>
+                    <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b40f.png')">
+                        <img src="image_97b40f.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 2">
+                    </div>
+                    <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b409.png')">
+                        <img src="image_97b409.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 3">
+                    </div>
+                    
+                    <!-- Set 2 (Cópia exata para criar o efeito infinito sem cortes) -->
+                    <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b42c.png')">
+                        <img src="image_97b42c.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 1">
+                    </div>
+                    <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b40f.png')">
+                        <img src="image_97b40f.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 2">
+                    </div>
+                    <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b409.png')">
+                        <img src="image_97b409.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 3">
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center text-gray-500 text-xs mt-8 font-medium uppercase tracking-widest animate-pulse"><i class="fa-solid fa-hand-pointer mr-2"></i> Clique na imagem para ampliar</p>
+        </div>
+    </section>
+
     <!-- Planos de Serviços (Pricing G4 Style) -->
     <section class="py-24 px-4 bg-black/40">
         <div class="max-w-7xl mx-auto">
@@ -401,7 +427,13 @@
                     <h3 class="text-2xl md:text-3xl font-black text-white mb-4 uppercase">Consultoria CRM</h3>
                     
                     <div class="mb-8 mt-4">
-                        <div class="text-4xl md:text-5xl font-black gold-gradient-text">R$ 3.200</div>
+                        <div class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-widest mb-1">12x de</div>
+                        <div class="font-black gold-gradient-text leading-none mb-2 flex justify-center items-start">
+                            <span class="text-2xl md:text-3xl mt-1 md:mt-2 mr-1">R$</span>
+                            <span class="text-5xl md:text-6xl tracking-tighter">319,99</span>
+                        </div>
+                        <div class="text-xs md:text-sm text-gray-300 font-medium tracking-wide">ou R$ 2.997 à vista</div>
+                        <div class="text-[10px] text-gray-500 mt-4 normal-case lowercase leading-tight">* valores cobrados à parte da assinatura do crm</div>
                     </div>
                     
                     <ul class="space-y-4 text-xs md:text-sm text-white font-medium mb-10">
@@ -475,7 +507,13 @@
         <p>&copy; 2026 Daniel Soldá. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Scripts (Typewriter + Scroll Reveal) -->
+    <!-- Lightbox Modal (Inicia Oculto) -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 md:top-10 md:right-10 text-white text-4xl hover:text-brand-gold transition-colors focus:outline-none" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-xl shadow-[0_0_50px_rgba(197,163,101,0.1)] scale-95 transition-transform duration-300 object-contain" alt="Feedback Ampliado" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- Scripts (Typewriter + Scroll Reveal + Lightbox) -->
     <script>
         // 1. Efeito Typewriter
         const phrases = [
@@ -538,6 +576,49 @@
             const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
             revealElements.forEach(el => observer.observe(el));
         }
+        
+        // 3. Funções do Lightbox (Modal de Imagens)
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Define a imagem clicada
+            lightboxImg.src = src;
+            
+            // Mostra o container
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            
+            // Animação de entrada (Delay mínimo para o CSS registar a mudança)
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Inicia animação de saída
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            
+            // Esconde após a animação
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+            }, 300);
+        }
+        
+        // Permite fechar a imagem pressionando a tecla ESC no teclado
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
         
         document.addEventListener("DOMContentLoaded", () => {
             // Inicia Typewriter
