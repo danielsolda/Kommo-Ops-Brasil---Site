@@ -24,11 +24,11 @@
                         sans: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
-                        'brand-dark': '#071b1e',
-                        'brand-teal': '#114b53',
+                        'brand-dark': '#0c282d',
+                        'brand-teal': '#165a63',
                         'brand-gold': '#c5a365',
                         'brand-gold-hover': '#e3c285',
-                        'brand-surface': '#0d2b30',
+                        'brand-surface': '#12363c',
                     }
                 }
             }
@@ -37,16 +37,16 @@
     
     <style>
         body {
-            background-color: #071b1e;
-            background-image: radial-gradient(circle at top right, rgba(17, 75, 83, 0.4) 0%, transparent 50%),
+            background-color: #0c282d;
+            background-image: radial-gradient(circle at top right, rgba(22, 90, 99, 0.4) 0%, transparent 50%),
                               radial-gradient(circle at bottom left, rgba(197, 163, 101, 0.05) 0%, transparent 50%);
             background-attachment: fixed;
             overflow-x: hidden;
         }
         
         .glass-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
-            border: 1px solid rgba(255,255,255,0.05);
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
         }
@@ -110,24 +110,21 @@
         }
     </style>
 </head>
-<body class="text-gray-200 antialiased selection:bg-brand-gold selection:text-brand-dark relative">
+<body class="text-gray-100 antialiased selection:bg-brand-gold selection:text-brand-dark relative">
 
     <!-- Navegação Minimalista Atualizada -->
     <nav class="w-full absolute top-0 left-0 z-50 p-4 md:p-6 flex justify-between items-start md:items-center max-w-7xl mx-auto right-0 reveal">
         <!-- Logo Text aumentado com tipografia fluida no mobile -->
         <div class="text-[7.5vw] sm:text-4xl md:text-4xl font-black tracking-tighter text-white uppercase leading-[0.9]">
-            KOMMO OPS BRASIL<span class="text-brand-gold block text-[3.5vw] sm:text-sm font-bold tracking-widest mt-1 opacity-80">- Por Daniel Ribeiro</span>
+            KOMMO OPS BRASIL<span class="text-brand-gold block text-[3.5vw] sm:text-sm font-bold tracking-widest mt-1 opacity-90">- Por Daniel Ribeiro</span>
         </div>
         
-        <!-- Menu Desktop: Botão Calculadora + Falar com Especialista -->
+        <!-- Menu Desktop: Botão Calculadora -->
         <div class="hidden md:flex items-center gap-4">
             <button onclick="openCalculator()" class="group flex items-center gap-2 text-xs lg:text-sm font-bold uppercase tracking-wider text-white border border-white/20 hover:border-brand-gold bg-brand-dark/50 px-4 py-2.5 rounded-xl transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-[0_0_15px_rgba(197,163,101,0.2)]">
                 <i class="fa-solid fa-calculator text-brand-gold group-hover:scale-110 transition-transform"></i>
                 Simular Assinatura
             </button>
-            <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="flex items-center gap-2 text-xs lg:text-sm font-bold uppercase tracking-wider text-brand-dark bg-brand-gold hover:bg-brand-gold-hover px-4 py-2.5 rounded-xl transition-colors shadow-[0_0_15px_rgba(197,163,101,0.3)]">
-                Falar com Especialista <i class="fa-solid fa-arrow-right"></i>
-            </a>
         </div>
 
         <!-- Menu Mobile: Ícone Calculadora Flutuante -->
@@ -157,23 +154,23 @@
                 </h1>
                 
                 <!-- Typewriter -->
-                <div class="text-lg md:text-2xl font-semibold text-gray-400 mb-8 min-h-[3.5rem] md:min-h-0 flex items-center">
+                <div class="text-lg md:text-2xl font-semibold text-gray-300 mb-8 min-h-[3.5rem] md:min-h-0 flex items-center">
                     <i class="fa-solid fa-angle-right text-brand-gold mr-3"></i>
                     <span id="typewriter" class="text-white"></span><span class="animate-pulse text-brand-gold ml-1">|</span>
                 </div>
                 
-                <p class="text-base md:text-lg text-gray-400 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/30 pl-4">
-                    Implemento e otimizo sua operação no <strong class="text-white">KommoCRM</strong>. Deixo seu time treinado para operar sem depender de improviso, transformando atendimento em lucro.
+                <p class="text-base md:text-lg text-gray-200 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/40 pl-4 font-medium">
+                    Implemento e otimizo sua operação no <strong class="text-white font-bold">KommoCRM</strong>. Deixo seu time treinado para operar sem depender de improviso, transformando atendimento em lucro.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="group relative flex items-center justify-center gap-3 py-4 px-6 md:px-8 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark rounded-none font-bold text-base md:text-lg uppercase tracking-wider transition-all duration-300 overflow-hidden w-full sm:w-auto text-center">
+                    <a href="#aplicacao" class="group relative flex items-center justify-center gap-3 py-4 px-6 md:px-8 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark rounded-none font-bold text-base md:text-lg uppercase tracking-wider transition-all duration-300 overflow-hidden w-full sm:w-auto text-center shadow-lg">
                         <div class="absolute inset-0 w-full h-full bg-white/30 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
-                        <i class="fa-brands fa-whatsapp text-2xl relative z-10"></i>
-                        <span class="relative z-10">Solicitar Consultoria</span>
+                        <i class="fa-solid fa-clipboard-list text-2xl relative z-10"></i>
+                        <span class="relative z-10">Aplicar para Consultoria</span>
                     </a>
                     <!-- Botão secundário Calculadora Mobile -->
-                    <button onclick="openCalculator()" class="md:hidden flex items-center justify-center gap-3 py-4 px-6 border border-white/20 hover:border-brand-gold text-white font-bold text-base uppercase tracking-wider transition-all duration-300 w-full text-center">
+                    <button onclick="openCalculator()" class="md:hidden flex items-center justify-center gap-3 py-4 px-6 border border-white/30 hover:border-brand-gold text-white font-bold text-base uppercase tracking-wider transition-all duration-300 w-full text-center">
                         <i class="fa-solid fa-calculator text-brand-gold"></i>
                         Calcular Assinatura
                     </button>
@@ -183,10 +180,10 @@
             <!-- Coluna Imagem (Foto Profissional + Badges) -->
             <div class="hidden md:flex relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] items-center">
                 <!-- Fundo decorativo -->
-                <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-30 rounded-full"></div>
+                <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-40 rounded-full"></div>
                 
                 <!-- Foto Principal -->
-                <img src="FotoProfissional.JPG" alt="Daniel Soldá" class="relative z-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 w-full object-cover grayscale-[20%] contrast-125 bg-brand-surface/50">
+                <img src="FotoProfissional.JPG" alt="Daniel Soldá" class="relative z-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-white/20 w-full object-cover grayscale-[10%] contrast-110 bg-brand-surface/50">
                 
                 <!-- Badge Kommo Partner -->
                 <div class="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-12 z-20 animate-float bg-white p-1.5 md:p-2 rounded-xl shadow-2xl border border-gray-200 scale-90 md:scale-100 min-w-[120px]">
@@ -194,12 +191,12 @@
                 </div>
 
                 <!-- Elemento Flutuante Secundário -->
-                <div class="absolute top-4 -right-2 md:top-10 md:-right-6 z-20 animate-float-delayed glass-card px-3 py-2 md:px-4 md:py-3 rounded-xl border-brand-gold/30 flex items-center gap-2 md:gap-3 scale-75 md:scale-100 origin-top-right">
+                <div class="absolute top-4 -right-2 md:top-10 md:-right-6 z-20 animate-float-delayed glass-card px-3 py-2 md:px-4 md:py-3 rounded-xl border-brand-gold/40 flex items-center gap-2 md:gap-3 scale-75 md:scale-100 origin-top-right bg-brand-dark/80">
                     <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-sm md:text-base">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
                     <div>
-                        <p class="text-[10px] md:text-xs text-gray-400 font-bold uppercase">Meta de Vendas</p>
+                        <p class="text-[10px] md:text-xs text-gray-300 font-bold uppercase">Meta de Vendas</p>
                         <p class="text-xs md:text-sm text-white font-black">Atingida <i class="fa-solid fa-check text-green-400 ml-1"></i></p>
                     </div>
                 </div>
@@ -208,34 +205,34 @@
     </header>
 
     <!-- Banner Autoridade Kommo -->
-    <div class="w-full bg-brand-surface border-y border-white/5 py-8 reveal">
+    <div class="w-full bg-brand-surface border-y border-white/10 py-8 reveal shadow-inner">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-            <span class="text-gray-500 font-bold uppercase tracking-[0.2em] text-sm md:text-base text-center">Especialista e Parceiro Oficial</span>
-            <img src="image_50c401.png" alt="Kommo CRM" class="h-16 md:h-24 kommo-logo-blend animate-pulse" style="animation-duration: 4s;">
+            <span class="text-gray-300 font-bold uppercase tracking-[0.2em] text-sm md:text-base text-center">Especialista e Parceiro Oficial</span>
+            <img src="image_50c401.png" alt="Kommo CRM" class="h-16 md:h-24 kommo-logo-blend animate-pulse opacity-90" style="animation-duration: 4s;">
         </div>
     </div>
 
     <!-- Problemas Section (Dores) -->
     <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center mb-16 reveal">
-            <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">O SEU COMERCIAL <br><span class="text-red-500">ESTÁ VAZANDO DINHEIRO?</span></h2>
+            <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">O SEU COMERCIAL <br><span class="text-red-400">ESTÁ VAZANDO DINHEIRO?</span></h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 md:p-10 rounded-none border-t-4 border-t-red-500 hover:-translate-y-2 transition-transform duration-300 reveal">
-                <i class="fa-solid fa-comments text-4xl text-red-500 mb-6"></i>
+            <div class="glass-card bg-brand-surface/40 p-6 md:p-10 rounded-none border-t-4 border-t-red-500 hover:-translate-y-2 transition-transform duration-300 reveal">
+                <i class="fa-solid fa-comments text-4xl text-red-400 mb-6"></i>
                 <h4 class="text-xl font-black text-white mb-4 uppercase">Bagunça Operacional</h4>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">WhatsApp pessoal e direct misturados. Ninguém sabe "em que pé" está o lead e o follow-up é feito totalmente no improviso.</p>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4 font-medium">WhatsApp pessoal e direct misturados. Ninguém sabe "em que pé" está o lead e o follow-up é feito totalmente no improviso.</p>
             </div>
-            <div class="glass-card p-6 md:p-10 rounded-none border-t-4 border-t-orange-500 hover:-translate-y-2 transition-transform duration-300 reveal delay-100">
-                <i class="fa-solid fa-filter-circle-xmark text-4xl text-orange-500 mb-6"></i>
+            <div class="glass-card bg-brand-surface/40 p-6 md:p-10 rounded-none border-t-4 border-t-orange-500 hover:-translate-y-2 transition-transform duration-300 reveal delay-100">
+                <i class="fa-solid fa-filter-circle-xmark text-4xl text-orange-400 mb-6"></i>
                 <h4 class="text-xl font-black text-white mb-4 uppercase">Baixa Conversão</h4>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">O lead entra, esfria e some. Falta cadência, não existe repescagem estruturada e sua equipe não tem SLAs ou tarefas automáticas.</p>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4 font-medium">O lead entra, esfria e some. Falta cadência, não existe repescagem estruturada e sua equipe não tem SLAs ou tarefas automáticas.</p>
             </div>
-            <div class="glass-card p-6 md:p-10 rounded-none border-t-4 border-t-brand-gold hover:-translate-y-2 transition-transform duration-300 reveal delay-200">
+            <div class="glass-card bg-brand-surface/40 p-6 md:p-10 rounded-none border-t-4 border-t-brand-gold hover:-translate-y-2 transition-transform duration-300 reveal delay-200">
                 <i class="fa-solid fa-chart-pie text-4xl text-brand-gold mb-6"></i>
                 <h4 class="text-xl font-black text-white mb-4 uppercase">Gestão às Cegas</h4>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">Você não sabe quantos leads viraram vendas. Não há leitura por canal ou atendente. A gestão é baseada em "sensação", não em dados.</p>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4 font-medium">Você não sabe quantos leads viraram vendas. Não há leitura por canal ou atendente. A gestão é baseada em "sensação", não em dados.</p>
             </div>
         </div>
     </section>
@@ -243,7 +240,7 @@
     <!-- O que eu entrego Section -->
     <section class="py-24 px-4 bg-brand-surface relative overflow-hidden">
         <!-- Detalhe de fundo -->
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/5 skew-x-12 translate-x-1/4"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/10 skew-x-12 translate-x-1/4"></div>
         
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
@@ -251,43 +248,43 @@
                     <h3 class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">A Solução Definitiva</h3>
                     <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">O QUE EU ENTREGO <br>PARA O SEU NEGÓCIO</h2>
                 </div>
-                <p class="text-gray-400 max-w-sm border-l-2 border-brand-gold pl-4 text-sm font-medium">
+                <p class="text-gray-300 max-w-sm border-l-2 border-brand-gold pl-4 text-sm font-medium">
                     Meu foco não é só "instalar CRM". É fazer o Kommo virar uma operação rentável, com uso real no dia a dia pela sua equipe.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Cards minimalistas -->
-                <div class="bg-brand-dark p-8 border border-white/5 hover:border-brand-gold/50 transition-colors reveal">
-                    <div class="w-12 h-12 bg-brand-gold/10 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
+                <div class="bg-brand-dark/80 p-8 border border-white/10 hover:border-brand-gold/60 transition-colors reveal shadow-lg">
+                    <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
                         <i class="fa-solid fa-sitemap"></i>
                     </div>
                     <h4 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Arquitetura CRM</h4>
-                    <p class="text-sm text-gray-500 leading-relaxed">Funis desenhados por objetivo, etapas claras, campos padronizados e rotinas para execução impecável.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Funis desenhados por objetivo, etapas claras, campos padronizados e rotinas para execução impecável.</p>
                 </div>
                 
-                <div class="bg-brand-dark p-8 border border-white/5 hover:border-brand-gold/50 transition-colors reveal delay-100">
-                    <div class="w-12 h-12 bg-brand-gold/10 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
+                <div class="bg-brand-dark/80 p-8 border border-white/10 hover:border-brand-gold/60 transition-colors reveal delay-100 shadow-lg">
+                    <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
                         <i class="fa-solid fa-robot"></i>
                     </div>
                     <h4 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Automação Real</h4>
-                    <p class="text-sm text-gray-500 leading-relaxed">Cadências, criação de tarefas, alertas de leads parados e avanço de etapas sem depender de cliques humanos.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Cadências, criação de tarefas, alertas de leads parados e avanço de etapas sem depender de cliques humanos.</p>
                 </div>
                 
-                <div class="bg-brand-dark p-8 border border-white/5 hover:border-brand-gold/50 transition-colors reveal delay-200">
-                    <div class="w-12 h-12 bg-brand-gold/10 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
+                <div class="bg-brand-dark/80 p-8 border border-white/10 hover:border-brand-gold/60 transition-colors reveal delay-200 shadow-lg">
+                    <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
                         <i class="fa-solid fa-link"></i>
                     </div>
                     <h4 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Integrações</h4>
-                    <p class="text-sm text-gray-500 leading-relaxed">O Kommo conectado perfeitamente ao WhatsApp, Instagram Direct, planilhas e Make.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">O Kommo conectado perfeitamente ao WhatsApp, Instagram Direct, planilhas e Make.</p>
                 </div>
                 
-                <div class="bg-brand-dark p-8 border border-white/5 hover:border-brand-gold/50 transition-colors reveal delay-300">
-                    <div class="w-12 h-12 bg-brand-gold/10 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
+                <div class="bg-brand-dark/80 p-8 border border-white/10 hover:border-brand-gold/60 transition-colors reveal delay-300 shadow-lg">
+                    <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center rounded-lg mb-6 text-brand-gold text-2xl">
                         <i class="fa-solid fa-chart-column"></i>
                     </div>
                     <h4 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Dados & Treino</h4>
-                    <p class="text-sm text-gray-500 leading-relaxed">Dashboards de performance para a gestão e treinamento intensivo para adoção real por parte da equipe.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Dashboards de performance para a gestão e treinamento intensivo para adoção real por parte da equipe.</p>
                 </div>
             </div>
         </div>
@@ -299,61 +296,61 @@
             <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">COMO FUNCIONA <br><span class="gold-gradient-text">A EXECUÇÃO</span></h2>
         </div>
 
-        <div class="relative border-l border-white/10 ml-4 md:ml-0 space-y-12">
+        <div class="relative border-l border-white/20 ml-4 md:ml-0 space-y-12">
             <!-- Step 1 -->
             <div class="relative pl-8 md:pl-0 reveal-left">
-                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold"></div>
+                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_8px_#c5a365]"></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="md:text-right md:pr-12 md:relative">
                         <div class="hidden md:block absolute -right-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
-                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-20 absolute -top-6 right-4 md:-top-8 md:-right-4">01</span>
+                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-30 absolute -top-6 right-4 md:-top-8 md:-right-4">01</span>
                         <h4 class="text-xl md:text-2xl font-black text-white uppercase mb-2">Kickoff & Mapeamento</h4>
                         <p class="text-brand-gold text-xs md:text-sm font-bold uppercase tracking-wider mb-4">Sales Model Canvas</p>
                     </div>
-                    <div class="glass-card p-6 border-l-4 border-l-brand-gold">
-                        <p class="text-gray-400 text-sm leading-relaxed">Mapeamos sua operação de ponta a ponta: como chegam os leads, etapas reais, gargalos, regras e indicadores. Daqui sai o "modelo de vendas" e o funil ideal do seu negócio.</p>
+                    <div class="glass-card bg-brand-surface/30 p-6 border-l-4 border-l-brand-gold">
+                        <p class="text-gray-200 text-sm leading-relaxed font-medium">Mapeamos sua operação de ponta a ponta: como chegam os leads, etapas reais, gargalos, regras e indicadores. Daqui sai o "modelo de vendas" e o funil ideal do seu negócio.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Step 2 -->
             <div class="relative pl-8 md:pl-0 reveal-right">
-                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold"></div>
+                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_8px_#c5a365]"></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="md:col-start-2 md:pl-12 md:relative">
                         <div class="hidden md:block absolute -left-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
-                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-20 absolute -top-6 left-4 md:-top-8 md:-left-4">02</span>
+                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-30 absolute -top-6 left-4 md:-top-8 md:-left-4">02</span>
                         <h4 class="text-xl md:text-2xl font-black text-white uppercase mb-2">Engenharia Kommo</h4>
                         <p class="text-brand-gold text-xs md:text-sm font-bold uppercase tracking-wider mb-4">Construção da Plataforma</p>
                     </div>
-                    <div class="glass-card p-6 border-l-4 border-l-brand-gold md:col-start-1 md:row-start-1">
-                        <p class="text-gray-400 text-sm leading-relaxed">Configuro tudo rigorosamente baseado no que foi definido no Kickoff: funis, etapas, campos customizados, regras de negócio e estrutura para dar escala e previsibilidade à operação.</p>
+                    <div class="glass-card bg-brand-surface/30 p-6 border-l-4 border-l-brand-gold md:col-start-1 md:row-start-1">
+                        <p class="text-gray-200 text-sm leading-relaxed font-medium">Configuro tudo rigorosamente baseado no que foi definido no Kickoff: funis, etapas, campos customizados, regras de negócio e estrutura para dar escala e previsibilidade à operação.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Step 3 -->
             <div class="relative pl-8 md:pl-0 reveal-left">
-                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold"></div>
+                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_8px_#c5a365]"></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="md:text-right md:pr-12 md:relative">
                         <div class="hidden md:block absolute -right-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
-                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-20 absolute -top-6 right-4 md:-top-8 md:-right-4">03</span>
+                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-30 absolute -top-6 right-4 md:-top-8 md:-right-4">03</span>
                         <h4 class="text-xl md:text-2xl font-black text-white uppercase mb-2">Imersão & Treino</h4>
                         <p class="text-brand-gold text-xs md:text-sm font-bold uppercase tracking-wider mb-4">Ciclo de Capacitação</p>
                     </div>
-                    <div class="glass-card p-6 border-l-4 border-l-brand-gold space-y-4">
-                        <div class="pb-3 border-b border-white/5">
+                    <div class="glass-card bg-brand-surface/30 p-6 border-l-4 border-l-brand-gold space-y-4">
+                        <div class="pb-3 border-b border-white/10">
                             <strong class="text-white block text-sm uppercase mb-1"><i class="fa-solid fa-users text-brand-gold w-5"></i> T1: Metodologia:</strong>
-                            <span class="text-gray-400 text-xs">Rotina certa de condução do lead e registro.</span>
+                            <span class="text-gray-300 text-xs">Rotina certa de condução do lead e registro.</span>
                         </div>
-                        <div class="pb-3 border-b border-white/5">
+                        <div class="pb-3 border-b border-white/10">
                             <strong class="text-white block text-sm uppercase mb-1"><i class="fa-solid fa-bolt text-brand-gold w-5"></i> T2: Automações:</strong>
-                            <span class="text-gray-400 text-xs">Cenário atual + autonomia para o dia a dia.</span>
+                            <span class="text-gray-300 text-xs">Cenário atual + autonomia para o dia a dia.</span>
                         </div>
                         <div>
                             <strong class="text-white block text-sm uppercase mb-1"><i class="fa-solid fa-chart-pie text-brand-gold w-5"></i> T3: Análise Comercial:</strong>
-                            <span class="text-gray-400 text-xs">Gestão por dentro do CRM (gargalos e conversão).</span>
+                            <span class="text-gray-300 text-xs">Gestão por dentro do CRM (gargalos e conversão).</span>
                         </div>
                     </div>
                 </div>
@@ -361,16 +358,16 @@
 
             <!-- Step 4 -->
             <div class="relative pl-8 md:pl-0 reveal-right">
-                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold"></div>
+                <div class="md:hidden absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_8px_#c5a365]"></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="md:col-start-2 md:pl-12 md:relative">
                         <div class="hidden md:block absolute -left-[5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-gold shadow-[0_0_10px_#c5a365]"></div>
-                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-20 absolute -top-6 left-4 md:-top-8 md:-left-4">04</span>
+                        <span class="text-brand-gold font-black text-5xl md:text-6xl opacity-30 absolute -top-6 left-4 md:-top-8 md:-left-4">04</span>
                         <h4 class="text-xl md:text-2xl font-black text-white uppercase mb-2">Governança</h4>
                         <p class="text-brand-gold text-xs md:text-sm font-bold uppercase tracking-wider mb-4">Acompanhamento Final</p>
                     </div>
-                    <div class="glass-card p-6 border-l-4 border-l-brand-gold md:col-start-1 md:row-start-1">
-                        <p class="text-gray-400 text-sm leading-relaxed">2 reuniões táticas para garantir o funcionamento da máquina e realizar melhorias finas. Entrega de um dashboard executivo personalizado para tomada de decisão.</p>
+                    <div class="glass-card bg-brand-surface/30 p-6 border-l-4 border-l-brand-gold md:col-start-1 md:row-start-1">
+                        <p class="text-gray-200 text-sm leading-relaxed font-medium">2 reuniões táticas para garantir o funcionamento da máquina e realizar melhorias finas. Entrega de um dashboard executivo personalizado para tomada de decisão.</p>
                     </div>
                 </div>
             </div>
@@ -378,7 +375,7 @@
     </section>
 
     <!-- Cases de Sucesso (Social Proof) -->
-    <section class="py-24 px-0 md:px-4 bg-brand-surface relative overflow-hidden border-t border-white/5">
+    <section class="py-24 px-0 md:px-4 bg-brand-surface relative overflow-hidden border-t border-white/10 shadow-inner">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 px-4 reveal">
                 <h3 class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">Resultados Reais</h3>
@@ -392,123 +389,243 @@
                 
                 <div class="carousel-track gap-6 px-4 md:px-0">
                     <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b42c.png')">
-                        <img src="image_97b42c.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 1">
+                        <img src="image_97b42c.png" class="w-full h-auto rounded-2xl border border-white/20 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 1">
                     </div>
                     <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b40f.png')">
-                        <img src="image_97b40f.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 2">
+                        <img src="image_97b40f.png" class="w-full h-auto rounded-2xl border border-white/20 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 2">
                     </div>
                     <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b409.png')">
-                        <img src="image_97b409.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 3">
+                        <img src="image_97b409.png" class="w-full h-auto rounded-2xl border border-white/20 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 3">
                     </div>
                     
                     <!-- Duplicate -->
                     <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b42c.png')">
-                        <img src="image_97b42c.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 1">
+                        <img src="image_97b42c.png" class="w-full h-auto rounded-2xl border border-white/20 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 1">
                     </div>
                     <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b40f.png')">
-                        <img src="image_97b40f.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 2">
+                        <img src="image_97b40f.png" class="w-full h-auto rounded-2xl border border-white/20 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 2">
                     </div>
                     <div class="w-[280px] md:w-[320px] shrink-0 cursor-pointer transform hover:scale-[1.03] transition-transform duration-300" onclick="openLightbox('image_97b409.png')">
-                        <img src="image_97b409.png" class="w-full h-auto rounded-2xl border border-white/10 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 3">
+                        <img src="image_97b409.png" class="w-full h-auto rounded-2xl border border-white/20 hover:border-brand-gold shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain bg-black/50" alt="Feedback de Cliente 3">
                     </div>
                 </div>
             </div>
             
-            <p class="text-center text-gray-500 text-xs mt-8 font-medium uppercase tracking-widest animate-pulse"><i class="fa-solid fa-hand-pointer mr-2"></i> Clique na imagem para ampliar</p>
+            <p class="text-center text-gray-400 text-xs mt-8 font-bold uppercase tracking-widest animate-pulse"><i class="fa-solid fa-hand-pointer mr-2"></i> Clique na imagem para ampliar</p>
         </div>
     </section>
 
-    <!-- Planos de Serviços (Pricing G4 Style) -->
-    <section class="py-24 px-4 bg-black/40">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">MODELOS DE <br><span class="gold-gradient-text">INVESTIMENTO</span></h2>
+    <!-- Formulário de Aplicação (Substituiu os Planos de Investimento) -->
+    <section id="aplicacao" class="py-24 px-4 bg-brand-dark relative overflow-hidden">
+        <!-- Detalhes de Fundo -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/4 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-teal/20 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/4 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-12 reveal">
+                <h3 class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">Passo Inicial</h3>
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">APLICAÇÃO PARA <br><span class="gold-gradient-text">CONSULTORIA</span></h2>
+                <p class="text-gray-300 mt-6 max-w-2xl mx-auto font-medium">Preencha os dados abaixo com precisão. Analisarei o cenário da sua empresa e entrarei em contacto para desenharmos a estrutura ideal no KommoCRM.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <!-- Plano 1 -->
-                <div class="bg-brand-surface border border-white/5 p-6 md:p-8 rounded-none reveal">
-                    <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Setup Básico</h4>
-                    <h3 class="text-xl md:text-2xl font-black text-white mb-6 uppercase">Implementação</h3>
-                    <div class="text-3xl md:text-4xl font-black text-white mb-8">R$ 600</div>
-                    <ul class="space-y-4 text-sm text-gray-400 font-medium mb-10">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> Setup da conta</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> Estrutura inicial do funil</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> Conexão WhatsApp/Insta</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-gold mr-3"></i> 1 Treinamento básico</li>
-                    </ul>
-                </div>
-
-                <!-- Plano Principal (Destaque) -->
-                <div class="bg-brand-dark border border-brand-gold p-6 md:p-10 transform md:-translate-y-4 shadow-[0_0_40px_rgba(197,163,101,0.15)] relative reveal delay-100">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark px-6 py-1.5 font-black uppercase tracking-widest text-[10px] md:text-xs whitespace-nowrap">
-                        Escopo Completo
-                    </div>
-                    <h4 class="text-xs md:text-sm font-bold text-brand-gold uppercase tracking-widest mb-2">Projeto Premium</h4>
-                    <h3 class="text-2xl md:text-3xl font-black text-white mb-4 uppercase">Consultoria CRM</h3>
+            <!-- Container do Formulário -->
+            <div id="form-container" class="glass-card bg-brand-surface/60 p-8 md:p-12 rounded-2xl border-t-4 border-t-brand-gold reveal delay-100 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+                <form id="consultoria-form" class="space-y-6">
                     
-                    <div class="mb-8 mt-4">
-                        <div class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-widest mb-1">12x de</div>
-                        <div class="font-black gold-gradient-text leading-none mb-2 flex justify-center items-start">
-                            <span class="text-2xl md:text-3xl mt-1 md:mt-2 mr-1">R$</span>
-                            <span class="text-5xl md:text-6xl tracking-tighter">319,99</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Nome -->
+                        <div class="space-y-2">
+                            <label for="nome" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome" class="w-full bg-brand-dark/80 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors">
                         </div>
-                        <div class="text-xs md:text-sm text-gray-300 font-medium tracking-wide">ou R$ 2.997 à vista</div>
-                        <div class="text-[10px] text-gray-500 mt-4 normal-case lowercase leading-tight">* valores cobrados à parte da assinatura do crm</div>
-                    </div>
-                    
-                    <ul class="space-y-4 text-xs md:text-sm text-white font-medium mb-10">
-                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Todo o escopo de implementação</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Automações avançadas</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Integrações (Sheets, Make)</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>3 Treinamentos + 2 Reuniões</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-star text-brand-gold mr-3 mt-1"></i> <span>Dashboard de Gestão Próprio</span></li>
-                    </ul>
-                    
-                    <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="block w-full text-center py-4 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark font-black uppercase tracking-widest transition-colors">
-                        Iniciar Consultoria
-                    </a>
-                </div>
 
-                <!-- Plano 3 -->
-                <div class="bg-brand-surface border border-white/5 p-8 rounded-none reveal delay-200">
-                    <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Evolução</h4>
-                    <h3 class="text-2xl font-black text-white mb-6 uppercase">Suporte Mensal</h3>
-                    <div class="text-3xl font-black text-white mb-8">A partir de R$ 380<span class="text-sm text-gray-500 font-medium">/mês</span></div>
-                    <ul class="space-y-4 text-sm text-gray-400 font-medium mb-10">
-                        <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-brand-gold mr-3"></i> Para operações já ativas</li>
-                        <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-brand-gold mr-3"></i> Melhorias de funil</li>
-                        <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-brand-gold mr-3"></i> Manutenção de integrações</li>
-                        <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-brand-gold mr-3"></i> Suporte à equipe</li>
-                    </ul>
+                        <!-- WhatsApp -->
+                        <div class="space-y-2">
+                            <label for="whatsapp" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">Melhor WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(11) 99999-9999" class="w-full bg-brand-dark/80 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- E-mail -->
+                        <div class="space-y-2">
+                            <label for="email" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">E-mail Profissional</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com" class="w-full bg-brand-dark/80 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors">
+                        </div>
+
+                        <!-- Empresa -->
+                        <div class="space-y-2">
+                            <label for="empresa" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">Nome da Empresa</label>
+                            <input type="text" id="empresa" name="empresa" required placeholder="Sua empresa" class="w-full bg-brand-dark/80 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Nicho -->
+                    <div class="space-y-2">
+                        <label for="nicho" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">Nicho de Atuação</label>
+                        <select id="nicho" name="nicho" required class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors appearance-none cursor-pointer">
+                            <option value="" disabled selected>Selecione a área da sua empresa...</option>
+                            <option value="Clínica médica">Clínica médica</option>
+                            <option value="Clínica de estética">Clínica de estética</option>
+                            <option value="Odontologia">Odontologia</option>
+                            <option value="Cirurgia plástica">Cirurgia plástica</option>
+                            <option value="Dermatologia">Dermatologia</option>
+                            <option value="Ginecologia e obstetrícia">Ginecologia e obstetrícia</option>
+                            <option value="Pediatria">Pediatria</option>
+                            <option value="Urologia">Urologia</option>
+                            <option value="Nutrição">Nutrição</option>
+                            <option value="Psicologia">Psicologia</option>
+                            <option value="Fisioterapia">Fisioterapia</option>
+                            <option value="Pilates / estúdio fitness">Pilates / estúdio fitness</option>
+                            <option value="Farmácia / manipulação">Farmácia / manipulação</option>
+                            <option value="Saúde integrativa">Saúde integrativa</option>
+                            <option value="Laboratório / exames">Laboratório / exames</option>
+                            <option value="Salão de beleza">Salão de beleza</option>
+                            <option value="Barbearia">Barbearia</option>
+                            <option value="Esmalteria">Esmalteria</option>
+                            <option value="Cosméticos / beleza">Cosméticos / beleza</option>
+                            <option value="Loja de roupas / moda feminina">Loja de roupas / moda feminina</option>
+                            <option value="Moda masculina">Moda masculina</option>
+                            <option value="Moda íntima / moda praia">Moda íntima / moda praia</option>
+                            <option value="Calçados e acessórios">Calçados e acessórios</option>
+                            <option value="Ótica">Ótica</option>
+                            <option value="Joalheria / semijoias">Joalheria / semijoias</option>
+                            <option value="Restaurante">Restaurante</option>
+                            <option value="Lanchonete / hamburgueria">Lanchonete / hamburgueria</option>
+                            <option value="Pizzaria">Pizzaria</option>
+                            <option value="Cafeteria">Cafeteria</option>
+                            <option value="Padaria / confeitaria">Padaria / confeitaria</option>
+                            <option value="Marmitaria / delivery">Marmitaria / delivery</option>
+                            <option value="Mercado / minimercado">Mercado / minimercado</option>
+                            <option value="Distribuidora de bebidas">Distribuidora de bebidas</option>
+                            <option value="Hotel / pousada">Hotel / pousada</option>
+                            <option value="Eventos / cerimonial / buffet">Eventos / cerimonial / buffet</option>
+                            <option value="Escola / cursos livres">Escola / cursos livres</option>
+                            <option value="Curso profissionalizante">Curso profissionalizante</option>
+                            <option value="Escola de idiomas">Escola de idiomas</option>
+                            <option value="Infoprodutos / mentoria">Infoprodutos / mentoria</option>
+                            <option value="Academia / treinamento esportivo">Academia / treinamento esportivo</option>
+                            <option value="Imobiliária">Imobiliária</option>
+                            <option value="Construtora / incorporadora">Construtora / incorporadora</option>
+                            <option value="Arquitetura">Arquitetura</option>
+                            <option value="Engenharia">Engenharia</option>
+                            <option value="Reforma / manutenção residencial">Reforma / manutenção residencial</option>
+                            <option value="Móveis / planejados">Móveis / planejados</option>
+                            <option value="Decoração / interiores">Decoração / interiores</option>
+                            <option value="Energia solar">Energia solar</option>
+                            <option value="Advocacia">Advocacia</option>
+                            <option value="Contabilidade">Contabilidade</option>
+                            <option value="Consultoria B2B">Consultoria B2B</option>
+                            <option value="Agência de marketing">Agência de marketing</option>
+                            <option value="Desenvolvimento de software / TI">Desenvolvimento de software / TI</option>
+                            <option value="Telecom / internet">Telecom / internet</option>
+                            <option value="Recursos humanos / recrutamento">Recursos humanos / recrutamento</option>
+                            <option value="Oficina mecânica / auto center">Oficina mecânica / auto center</option>
+                            <option value="Autopeças / acessórios automotivos">Autopeças / acessórios automotivos</option>
+                            <option value="Transportadora / logística">Transportadora / logística</option>
+                            <option value="Pet shop / veterinária">Pet shop / veterinária</option>
+                            <option value="Agro / insumos rurais">Agro / insumos rurais</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Faturamento -->
+                        <div class="space-y-2">
+                            <label for="faturamento" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">Faturamento Atual</label>
+                            <select id="faturamento" name="faturamento" required class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors appearance-none cursor-pointer">
+                                <option value="" disabled selected>Selecione uma faixa...</option>
+                                <option value="Ainda não faturo">Ainda não faturo</option>
+                                <option value="Até R$ 10 mil/mês">Até R$ 10 mil/mês</option>
+                                <option value="De R$ 10 mil a R$ 30 mil/mês">De R$ 10 mil a R$ 30 mil/mês</option>
+                                <option value="De R$ 30 mil a R$ 60 mil/mês">De R$ 30 mil a R$ 60 mil/mês</option>
+                                <option value="De R$ 60 mil a R$ 100 mil/mês">De R$ 60 mil a R$ 100 mil/mês</option>
+                                <option value="De R$ 100 mil a R$ 300 mil/mês">De R$ 100 mil a R$ 300 mil/mês</option>
+                                <option value="Acima de R$ 300 mil/mês">Acima de R$ 300 mil/mês</option>
+                            </select>
+                        </div>
+
+                        <!-- Usa CRM -->
+                        <div class="space-y-2">
+                            <label for="usa_crm" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">Usa CRM hoje?</label>
+                            <select id="usa_crm" name="usa_crm" required class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors appearance-none cursor-pointer">
+                                <option value="" disabled selected>Selecione uma opção...</option>
+                                <option value="Não uso nenhum CRM">Não uso nenhum CRM</option>
+                                <option value="Uso planilha / controle manual">Uso planilha / controle manual</option>
+                                <option value="Já usei CRM, mas hoje não uso">Já usei CRM, mas hoje não uso</option>
+                                <option value="Uso Kommo">Uso Kommo</option>
+                                <option value="Uso outro CRM">Uso outro CRM</option>
+                                <option value="Uso CRM e automações">Uso CRM e automações</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Dificuldade -->
+                    <div class="space-y-2">
+                        <label for="dificuldade" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">Principal dificuldade hoje</label>
+                        <textarea id="dificuldade" name="dificuldade" rows="3" required placeholder="O que mais trava suas vendas ou atendimento hoje?" class="w-full bg-brand-dark/80 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors resize-none"></textarea>
+                    </div>
+
+                    <!-- Melhoria -->
+                    <div class="space-y-2">
+                        <label for="melhoria" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">O que quer estruturar/melhorar</label>
+                        <textarea id="melhoria" name="melhoria" rows="3" required placeholder="Qual o seu principal objetivo com a consultoria?" class="w-full bg-brand-dark/80 border border-white/10 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors resize-none"></textarea>
+                    </div>
+
+                    <!-- Urgência -->
+                    <div class="space-y-2">
+                        <label for="urgencia" class="block text-xs font-bold text-gray-300 uppercase tracking-wider">Urgência para começar</label>
+                        <select id="urgencia" name="urgencia" required class="w-full bg-brand-dark border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors appearance-none cursor-pointer">
+                            <option value="" disabled selected>Selecione um prazo...</option>
+                            <option value="Quero começar imediatamente">Quero começar imediatamente</option>
+                            <option value="Nos próximos 7 dias">Nos próximos 7 dias</option>
+                            <option value="Nos próximos 30 dias">Nos próximos 30 dias</option>
+                            <option value="Só estou avaliando no momento">Só estou avaliando no momento</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-brand-gold hover:bg-brand-gold-hover text-brand-dark font-black text-lg uppercase tracking-widest py-5 rounded-xl transition-all duration-300 mt-4 shadow-[0_0_20px_rgba(197,163,101,0.3)] hover:shadow-[0_0_30px_rgba(197,163,101,0.5)]">
+                        Enviar Aplicação Agora <i class="fa-solid fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Mensagem de Sucesso (Oculta Inicialmente) -->
+            <div id="form-success" class="hidden glass-card bg-brand-surface/80 p-10 md:p-16 rounded-2xl border-t-4 border-t-green-500 text-center shadow-[0_0_50px_rgba(34,197,94,0.2)]">
+                <div class="w-20 h-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
+                    <i class="fa-solid fa-check"></i>
                 </div>
+                <h3 class="text-3xl font-black text-white mb-4 uppercase">Aplicação Recebida!</h3>
+                <p class="text-lg text-gray-300 mb-8 font-medium">Seus dados foram enviados com sucesso. Vou analisar o seu cenário e entrarei em contacto consigo muito em breve.</p>
+                <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" target="_blank" class="inline-flex items-center justify-center gap-3 py-4 px-8 bg-green-600 hover:bg-green-500 text-white font-bold text-lg uppercase tracking-wider transition-all duration-300 rounded-xl shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Chamar no WhatsApp Agora
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Call to Action Final (Removido o form, adicionado WhatsApp) -->
     <section class="py-24 px-4 max-w-5xl mx-auto text-center reveal">
-        <div class="glass-card p-10 md:p-16 rounded-none relative border-t-8 border-t-brand-gold overflow-hidden">
+        <div class="glass-card p-10 md:p-16 rounded-none relative border-t-8 border-t-brand-gold overflow-hidden bg-brand-surface/80">
             <!-- Efeito de luz no fundo -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-gold/10 blur-[100px] rounded-full"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-gold/15 blur-[100px] rounded-full"></div>
             
             <h2 class="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight relative z-10">ASSUMA O CONTROLE <br>DO SEU COMERCIAL</h2>
             
-            <p class="text-lg text-gray-300 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-medium">
+            <p class="text-lg text-gray-200 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-medium">
                 "Se você me disser como hoje chegam os leads e como vocês os atendem, eu já te retorno com o desenho do caminho ideal para escalar suas vendas com controle absoluto."
             </p>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
                 <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" 
                    target="_blank" 
-                   class="group flex items-center justify-center gap-3 py-5 px-10 bg-green-600 hover:bg-green-500 text-white font-black text-lg uppercase tracking-widest transition-all duration-300 shadow-[0_0_30px_rgba(22,163,74,0.3)] hover:shadow-[0_0_50px_rgba(22,163,74,0.5)]">
+                   class="group flex items-center justify-center gap-3 py-5 px-10 bg-green-600 hover:bg-green-500 text-white font-black text-lg uppercase tracking-widest transition-all duration-300 shadow-[0_0_30px_rgba(22,163,74,0.4)] hover:shadow-[0_0_50px_rgba(22,163,74,0.6)]">
                     <i class="fa-brands fa-whatsapp text-2xl animate-pulse"></i>
                     <span>Chamar no WhatsApp</span>
                 </a>
                 
                 <a href="https://youtube.com/@crmproospecta?si=xZwPzwtl58rPxD8O" 
                    target="_blank" 
-                   class="flex items-center justify-center gap-3 py-5 px-10 bg-transparent border border-gray-600 text-gray-300 hover:text-white hover:border-brand-gold transition-all duration-300 font-bold uppercase tracking-wider">
+                   class="flex items-center justify-center gap-3 py-5 px-10 bg-transparent border-2 border-gray-500 text-gray-200 hover:text-white hover:border-brand-gold transition-all duration-300 font-bold uppercase tracking-wider">
                     <i class="fa-brands fa-youtube text-xl text-red-500"></i>
                     <span>Ver YouTube</span>
                 </a>
@@ -517,12 +634,12 @@
     </section>
 
     <!-- Rodapé -->
-    <footer class="py-10 border-t border-white/10 text-center text-xs font-bold uppercase tracking-widest text-gray-600 bg-brand-dark w-full">
+    <footer class="py-10 border-t border-white/20 text-center text-xs font-bold uppercase tracking-widest text-gray-400 bg-brand-dark w-full">
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-4">
             <span>Atendimento Remoto (Ibiúna - SP)</span>
-            <span class="hidden md:inline">•</span>
+            <span class="hidden md:inline text-brand-gold">•</span>
             <span class="flex items-center gap-2">
-                Parceiro Oficial <img src="image_50c401.png" class="h-4 kommo-logo-blend opacity-70" alt="Kommo">
+                Parceiro Oficial <img src="image_50c401.png" class="h-4 kommo-logo-blend opacity-90" alt="Kommo">
             </span>
         </div>
         <p>&copy; 2026 Daniel Soldá. Todos os direitos reservados.</p>
@@ -531,46 +648,46 @@
     <!-- Lightbox Modal (Inicia Oculto) -->
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
         <button class="absolute top-6 right-6 md:top-10 md:right-10 text-white text-4xl hover:text-brand-gold transition-colors focus:outline-none" onclick="closeLightbox()">&times;</button>
-        <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-xl shadow-[0_0_50px_rgba(197,163,101,0.1)] scale-95 transition-transform duration-300 object-contain" alt="Feedback Ampliado" onclick="event.stopPropagation()">
+        <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-xl shadow-[0_0_50px_rgba(197,163,101,0.2)] scale-95 transition-transform duration-300 object-contain" alt="Feedback Ampliado" onclick="event.stopPropagation()">
     </div>
 
     <!-- Modal da Calculadora Kommo (Inicia Oculto) -->
     <div id="calculator-modal" class="fixed inset-0 z-[120] bg-black/90 hidden flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300">
-        <div class="bg-brand-surface border border-brand-gold/30 rounded-2xl w-full max-w-lg p-6 md:p-8 relative shadow-[0_0_50px_rgba(197,163,101,0.15)] max-h-[95vh] overflow-y-auto" onclick="event.stopPropagation()">
-            <button class="absolute top-4 right-5 text-gray-400 hover:text-white text-3xl focus:outline-none" onclick="closeCalculator()">&times;</button>
+        <div class="bg-brand-surface border border-brand-gold/40 rounded-2xl w-full max-w-lg p-6 md:p-8 relative shadow-[0_0_50px_rgba(197,163,101,0.25)] max-h-[95vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <button class="absolute top-4 right-5 text-gray-300 hover:text-white text-3xl focus:outline-none" onclick="closeCalculator()">&times;</button>
             
             <div class="flex items-center gap-3 mb-2">
                 <i class="fa-solid fa-calculator text-2xl text-brand-gold"></i>
                 <h3 class="text-2xl font-black text-white uppercase">Calculadora <span class="text-brand-gold">Kommo</span></h3>
             </div>
-            <p class="text-sm text-gray-400 mb-6">Simule o valor das licenças da plataforma para a sua operação.</p>
+            <p class="text-sm text-gray-300 mb-6 font-medium">Simule o valor das licenças da plataforma para a sua operação.</p>
             
             <!-- Benefício Parceiro Destaque -->
-            <div class="bg-brand-gold/10 border border-brand-gold/30 rounded-xl p-4 mb-6 shadow-inner relative overflow-hidden">
-                <div class="absolute -right-4 -top-4 text-brand-gold/10 text-7xl"><i class="fa-solid fa-medal"></i></div>
+            <div class="bg-brand-gold/15 border border-brand-gold/40 rounded-xl p-4 mb-6 shadow-inner relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-brand-gold/20 text-7xl"><i class="fa-solid fa-medal"></i></div>
                 <h4 class="font-bold text-brand-gold text-sm uppercase tracking-wide flex items-center gap-2 mb-3 relative z-10">
                     <i class="fa-solid fa-gift"></i> Vantagem Oficial Parceiro
                 </h4>
-                <ul class="text-sm text-gray-300 space-y-2 relative z-10">
-                    <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> <span><strong>+1 Mês Grátis</strong> adicionado em qualquer pacote de assinatura que escolher.</span></li>
-                    <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> <span><strong>28 dias de teste gratuito</strong> com a plataforma liberada antes de qualquer cobrança.</span></li>
+                <ul class="text-sm text-gray-200 space-y-2 relative z-10 font-medium">
+                    <li class="flex items-start"><i class="fa-solid fa-check text-green-400 mt-1 mr-2"></i> <span><strong>+1 Mês Grátis</strong> adicionado em qualquer pacote de assinatura que escolher.</span></li>
+                    <li class="flex items-start"><i class="fa-solid fa-check text-green-400 mt-1 mr-2"></i> <span><strong>28 dias de teste gratuito</strong> com a plataforma liberada antes de qualquer cobrança.</span></li>
                 </ul>
             </div>
 
             <div class="space-y-5">
                 <!-- Seleção do Plano -->
                 <div>
-                    <label class="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">1. Selecione o Plano</label>
+                    <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">1. Selecione o Plano</label>
                     <div class="grid grid-cols-3 gap-2">
-                        <button class="calc-plan-btn active border-brand-gold bg-brand-gold/10 text-white rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1" data-price="80">
+                        <button class="calc-plan-btn active border-brand-gold bg-brand-gold/20 text-white rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1 shadow-md" data-price="80">
                             Básico
-                            <span class="text-[10px] font-normal text-gray-400">R$80 /mês</span>
+                            <span class="text-[10px] font-normal text-gray-300">R$80 /mês</span>
                         </button>
-                        <button class="calc-plan-btn border-white/10 bg-brand-dark hover:bg-white/5 text-gray-400 rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1" data-price="133">
+                        <button class="calc-plan-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1" data-price="133">
                             Avançado
                             <span class="text-[10px] font-normal text-gray-400">R$133 /mês</span>
                         </button>
-                        <button class="calc-plan-btn border-white/10 bg-brand-dark hover:bg-white/5 text-gray-400 rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1" data-price="239">
+                        <button class="calc-plan-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1" data-price="239">
                             Pro
                             <span class="text-[10px] font-normal text-gray-400">R$239 /mês</span>
                         </button>
@@ -579,37 +696,37 @@
 
                 <!-- Número de Usuários -->
                 <div>
-                    <label class="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">2. Número de Usuários (Atendentes)</label>
+                    <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">2. Número de Usuários (Atendentes)</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <i class="fa-solid fa-users text-gray-500"></i>
+                            <i class="fa-solid fa-users text-gray-400"></i>
                         </div>
-                        <input type="number" id="calc-users" min="1" value="1" class="w-full bg-brand-dark border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white font-bold focus:outline-none focus:border-brand-gold transition-colors text-lg">
+                        <input type="number" id="calc-users" min="1" value="1" class="w-full bg-brand-dark border border-white/20 rounded-xl py-3 pl-12 pr-4 text-white font-bold focus:outline-none focus:border-brand-gold transition-colors text-lg shadow-inner">
                     </div>
                 </div>
 
                 <!-- Tempo de Assinatura -->
                 <div>
-                    <label class="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">3. Tempo de Assinatura</label>
+                    <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">3. Tempo de Assinatura</label>
                     <div class="grid grid-cols-4 gap-2">
-                        <button class="calc-time-btn active border-brand-gold bg-brand-gold/10 text-white rounded-xl py-2 text-sm font-bold border transition-colors" data-months="6">6 Meses</button>
-                        <button class="calc-time-btn border-white/10 bg-brand-dark hover:bg-white/5 text-gray-400 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="9">9 Meses</button>
-                        <button class="calc-time-btn border-white/10 bg-brand-dark hover:bg-white/5 text-gray-400 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="12">12 Meses</button>
-                        <button class="calc-time-btn border-white/10 bg-brand-dark hover:bg-white/5 text-gray-400 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="24">24 Meses</button>
+                        <button class="calc-time-btn active border-brand-gold bg-brand-gold/20 text-white rounded-xl py-2 text-sm font-bold border transition-colors shadow-md" data-months="6">6 Meses</button>
+                        <button class="calc-time-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="9">9 Meses</button>
+                        <button class="calc-time-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="12">12 Meses</button>
+                        <button class="calc-time-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="24">24 Meses</button>
                     </div>
                 </div>
             </div>
 
             <!-- Resultado Total -->
-            <div class="mt-8 border-t border-white/10 pt-6 bg-brand-dark/50 rounded-b-2xl -mx-6 -mb-6 p-6 md:-mx-8 md:-mb-8 md:p-8">
+            <div class="mt-8 border-t border-white/20 pt-6 bg-brand-dark/80 rounded-b-2xl -mx-6 -mb-6 p-6 md:-mx-8 md:-mb-8 md:p-8">
                 <div class="flex flex-col mb-1">
-                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold mb-1">Investimento Aproximado nas Licenças</span>
+                    <span class="text-xs text-gray-300 uppercase tracking-widest font-bold mb-1">Investimento Aproximado nas Licenças</span>
                     <div class="text-4xl font-black gold-gradient-text" id="calc-total">R$ 0,00</div>
-                    <span class="text-[10px] text-gray-500 mt-2 italic">* Valores aproximados sujeitos à variação cambial do dólar.</span>
+                    <span class="text-[11px] text-gray-400 mt-2 italic font-medium">* Valores aproximados sujeitos à variação cambial do dólar.</span>
                 </div>
-                <div class="flex items-start gap-2 mt-3 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">
+                <div class="flex items-start gap-2 mt-3 p-3 bg-green-500/15 border border-green-500/30 rounded-lg">
                     <i class="fa-solid fa-hand-holding-dollar text-green-400 mt-0.5"></i>
-                    <p class="text-xs text-green-400 font-medium leading-relaxed" id="calc-bonus-text">
+                    <p class="text-xs text-green-400 font-bold leading-relaxed" id="calc-bonus-text">
                         Bônus de Parceiro: Você paga por 6 meses e utiliza a plataforma por 7 meses inteiros!
                     </p>
                 </div>
@@ -725,12 +842,12 @@
             planBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     planBtns.forEach(b => {
-                        b.classList.remove('active', 'border-brand-gold', 'bg-brand-gold/10', 'text-white');
-                        b.classList.add('border-white/10', 'bg-brand-dark', 'text-gray-400');
+                        b.classList.remove('active', 'border-brand-gold', 'bg-brand-gold/20', 'text-white', 'shadow-md');
+                        b.classList.add('border-white/20', 'bg-brand-dark', 'text-gray-300');
                     });
                     const target = e.currentTarget;
-                    target.classList.remove('border-white/10', 'bg-brand-dark', 'text-gray-400');
-                    target.classList.add('active', 'border-brand-gold', 'bg-brand-gold/10', 'text-white');
+                    target.classList.remove('border-white/20', 'bg-brand-dark', 'text-gray-300');
+                    target.classList.add('active', 'border-brand-gold', 'bg-brand-gold/20', 'text-white', 'shadow-md');
                     selectedPrice = parseInt(target.getAttribute('data-price'));
                     updateCalculation();
                 });
@@ -740,12 +857,12 @@
             timeBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     timeBtns.forEach(b => {
-                        b.classList.remove('active', 'border-brand-gold', 'bg-brand-gold/10', 'text-white');
-                        b.classList.add('border-white/10', 'bg-brand-dark', 'text-gray-400');
+                        b.classList.remove('active', 'border-brand-gold', 'bg-brand-gold/20', 'text-white', 'shadow-md');
+                        b.classList.add('border-white/20', 'bg-brand-dark', 'text-gray-300');
                     });
                     const target = e.currentTarget;
-                    target.classList.remove('border-white/10', 'bg-brand-dark', 'text-gray-400');
-                    target.classList.add('active', 'border-brand-gold', 'bg-brand-gold/10', 'text-white');
+                    target.classList.remove('border-white/20', 'bg-brand-dark', 'text-gray-300');
+                    target.classList.add('active', 'border-brand-gold', 'bg-brand-gold/20', 'text-white', 'shadow-md');
                     selectedMonths = parseInt(target.getAttribute('data-months'));
                     updateCalculation();
                 });
@@ -807,6 +924,47 @@
         
         // Clica fora para fechar o Modal da calculadora
         document.getElementById('calculator-modal').addEventListener('click', closeCalculator);
+        
+        // 5. Envio do Formulário de Aplicação (Webhook)
+        const form = document.getElementById('consultoria-form');
+        if (form) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const submitBtn = document.getElementById('submit-btn');
+                const originalText = submitBtn.innerHTML;
+                
+                // Animação de carregamento
+                submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando Aplicação...';
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+
+                try {
+                    const response = await fetch('https://primary-production-263c.up.railway.app/webhook/a4a1c76c-c137-417e-893c-967757864003', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    // Oculta formulário e mostra mensagem de sucesso
+                    document.getElementById('form-container').classList.add('hidden');
+                    document.getElementById('form-success').classList.remove('hidden');
+                    
+                    // Rola a página até a mensagem de sucesso
+                    document.getElementById('aplicacao').scrollIntoView({ behavior: 'smooth' });
+
+                } catch (error) {
+                    alert('Ocorreu um erro ao enviar. Por favor, verifique sua conexão ou chame-nos diretamente no WhatsApp.');
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                }
+            });
+        }
         
         // Inits on Load
         document.addEventListener("DOMContentLoaded", () => {
