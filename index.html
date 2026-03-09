@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajuste no viewport para evitar zoom indesejado em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Daniel Soldá - Consultoria KommoCRM</title>
     
     <!-- Tailwind CSS -->
@@ -41,7 +42,7 @@
             background-image: radial-gradient(circle at top right, rgba(22, 90, 99, 0.4) 0%, transparent 50%),
                               radial-gradient(circle at bottom left, rgba(197, 163, 101, 0.05) 0%, transparent 50%);
             background-attachment: fixed;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Força o bloqueio de barra de rolagem horizontal */
         }
         
         .glass-card {
@@ -110,7 +111,8 @@
         }
     </style>
 </head>
-<body class="text-gray-100 antialiased selection:bg-brand-gold selection:text-brand-dark relative">
+<!-- Aplicado overflow-x-hidden e w-full para garantir bloqueio horizontal absoluto no mobile -->
+<body class="text-gray-100 antialiased selection:bg-brand-gold selection:text-brand-dark relative overflow-x-hidden w-full">
 
     <!-- Navegação Minimalista Atualizada -->
     <nav class="w-full absolute top-0 left-0 z-50 p-4 md:p-6 flex justify-between items-start md:items-center max-w-7xl mx-auto right-0 reveal">
@@ -138,7 +140,15 @@
     <!-- Hero Section -->
     <header class="relative pt-32 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[80vh] md:min-h-[85vh] flex flex-col justify-center">
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
+        <!-- Imagem desfocada de fundo para modo Mobile -->
+        <div class="absolute inset-0 z-0 md:hidden pointer-events-none overflow-hidden">
+            <img src="FotoProfissional.JPG" alt="" class="w-full h-full object-cover object-[center_top] opacity-25 blur-2xl scale-110">
+            <!-- Degradê para mesclar a imagem de forma suave no fundo da página -->
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/10 via-brand-dark/70 to-brand-dark"></div>
+        </div>
+
+        <!-- grid e relative z-10 forçam o conteúdo para a frente do fundo mobile -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center relative z-10">
             
             <!-- Coluna Texto -->
             <div class="z-10 reveal-left">
@@ -149,35 +159,35 @@
                 
                 <!-- Texto responsivo ajustado para não vazar por cima da foto em nenhuma tela -->
                 <h1 class="font-black tracking-tighter mb-4 text-white flex flex-col leading-none md:leading-[1.05]">
-                    <span class="text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl mb-1 md:mb-0">VENDAS COM</span>
-                    <span class="gold-gradient-text text-2xl min-[400px]:text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl">PREVISIBILIDADE.</span>
+                    <span class="text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl mb-1 md:mb-0 drop-shadow-md">VENDAS COM</span>
+                    <span class="gold-gradient-text text-2xl min-[400px]:text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl drop-shadow-md">PREVISIBILIDADE.</span>
                 </h1>
                 
                 <!-- Typewriter -->
-                <div class="text-lg md:text-2xl font-semibold text-gray-300 mb-8 min-h-[3.5rem] md:min-h-0 flex items-center">
+                <div class="text-lg md:text-2xl font-semibold text-gray-200 mb-8 min-h-[3.5rem] md:min-h-0 flex items-center drop-shadow-sm">
                     <i class="fa-solid fa-angle-right text-brand-gold mr-3"></i>
                     <span id="typewriter" class="text-white"></span><span class="animate-pulse text-brand-gold ml-1">|</span>
                 </div>
                 
-                <p class="text-base md:text-lg text-gray-200 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/40 pl-4 font-medium">
+                <p class="text-base md:text-lg text-gray-200 max-w-lg leading-relaxed mb-10 border-l-2 border-brand-gold/40 pl-4 font-medium drop-shadow-sm">
                     Implemento e otimizo sua operação no <strong class="text-white font-bold">KommoCRM</strong>. Deixo seu time treinado para operar sem depender de improviso, transformando atendimento em lucro.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#aplicacao" class="group relative flex items-center justify-center gap-3 py-4 px-6 md:px-8 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark rounded-none font-bold text-base md:text-lg uppercase tracking-wider transition-all duration-300 overflow-hidden w-full sm:w-auto text-center shadow-lg">
+                    <a href="#aplicacao" class="group relative flex items-center justify-center gap-3 py-4 px-6 md:px-8 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark rounded-none font-bold text-base md:text-lg uppercase tracking-wider transition-all duration-300 overflow-hidden w-full sm:w-auto text-center shadow-[0_5px_20px_rgba(197,163,101,0.3)]">
                         <div class="absolute inset-0 w-full h-full bg-white/30 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                         <i class="fa-solid fa-clipboard-list text-2xl relative z-10"></i>
                         <span class="relative z-10">Aplicar para Consultoria</span>
                     </a>
                     <!-- Botão secundário Calculadora Mobile -->
-                    <button onclick="openCalculator()" class="md:hidden flex items-center justify-center gap-3 py-4 px-6 border border-white/30 hover:border-brand-gold text-white font-bold text-base uppercase tracking-wider transition-all duration-300 w-full text-center">
+                    <button onclick="openCalculator()" class="md:hidden flex items-center justify-center gap-3 py-4 px-6 border border-brand-gold/30 bg-brand-dark/50 backdrop-blur-sm hover:border-brand-gold text-white font-bold text-base uppercase tracking-wider transition-all duration-300 w-full text-center">
                         <i class="fa-solid fa-calculator text-brand-gold"></i>
                         Calcular Assinatura
                     </button>
                 </div>
             </div>
 
-            <!-- Coluna Imagem (Foto Profissional + Badges) -->
+            <!-- Coluna Imagem Desktop (Foto Profissional + Badges) -->
             <div class="hidden md:flex relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] items-center">
                 <!-- Fundo decorativo -->
                 <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-40 rounded-full"></div>
