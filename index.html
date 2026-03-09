@@ -2,7 +2,6 @@
 <html lang="pt-BR" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <!-- Ajuste no viewport para evitar zoom indesejado em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Daniel Soldá - Consultoria KommoCRM</title>
     
@@ -42,7 +41,7 @@
             background-image: radial-gradient(circle at top right, rgba(22, 90, 99, 0.4) 0%, transparent 50%),
                               radial-gradient(circle at bottom left, rgba(197, 163, 101, 0.05) 0%, transparent 50%);
             background-attachment: fixed;
-            overflow-x: hidden; /* Força o bloqueio de barra de rolagem horizontal */
+            overflow-x: hidden;
         }
         
         .glass-card {
@@ -111,29 +110,12 @@
         }
     </style>
 </head>
-<!-- Aplicado overflow-x-hidden e w-full para garantir bloqueio horizontal absoluto no mobile -->
 <body class="text-gray-100 antialiased selection:bg-brand-gold selection:text-brand-dark relative overflow-x-hidden w-full">
 
     <!-- Navegação Minimalista Atualizada -->
     <nav class="w-full absolute top-0 left-0 z-50 p-4 md:p-6 flex justify-between items-start md:items-center max-w-7xl mx-auto right-0 reveal">
-        <!-- Logo Text aumentado com tipografia fluida no mobile -->
         <div class="text-[7.5vw] sm:text-4xl md:text-4xl font-black tracking-tighter text-white uppercase leading-[0.9]">
             KOMMO OPS BRASIL<span class="text-brand-gold block text-[3.5vw] sm:text-sm font-bold tracking-widest mt-1 opacity-90">- Por Daniel Ribeiro</span>
-        </div>
-        
-        <!-- Menu Desktop: Botão Calculadora -->
-        <div class="hidden md:flex items-center gap-4">
-            <button onclick="openCalculator()" class="group flex items-center gap-2 text-xs lg:text-sm font-bold uppercase tracking-wider text-white border border-white/20 hover:border-brand-gold bg-brand-dark/50 px-4 py-2.5 rounded-xl transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-[0_0_15px_rgba(197,163,101,0.2)]">
-                <i class="fa-solid fa-calculator text-brand-gold group-hover:scale-110 transition-transform"></i>
-                Simular Assinatura
-            </button>
-        </div>
-
-        <!-- Menu Mobile: Ícone Calculadora Flutuante -->
-        <div class="md:hidden flex items-center gap-3 mt-1">
-            <button onclick="openCalculator()" class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-gold/10 border border-brand-gold/30 text-brand-gold shadow-[0_0_10px_rgba(197,163,101,0.2)] relative animate-pulse" style="animation-duration: 3s;">
-                <i class="fa-solid fa-calculator"></i>
-            </button>
         </div>
     </nav>
 
@@ -143,11 +125,9 @@
         <!-- Imagem desfocada de fundo para modo Mobile -->
         <div class="absolute inset-0 z-0 md:hidden pointer-events-none overflow-hidden">
             <img src="FotoProfissional.JPG" alt="" class="w-full h-full object-cover object-[center_top] opacity-25 blur-2xl scale-110">
-            <!-- Degradê para mesclar a imagem de forma suave no fundo da página -->
             <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/10 via-brand-dark/70 to-brand-dark"></div>
         </div>
 
-        <!-- grid e relative z-10 forçam o conteúdo para a frente do fundo mobile -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center relative z-10">
             
             <!-- Coluna Texto -->
@@ -157,13 +137,11 @@
                     Transformação Comercial
                 </div>
                 
-                <!-- Texto responsivo ajustado para não vazar por cima da foto em nenhuma tela -->
                 <h1 class="font-black tracking-tighter mb-4 text-white flex flex-col leading-none md:leading-[1.05]">
                     <span class="text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl mb-1 md:mb-0 drop-shadow-md">VENDAS COM</span>
                     <span class="gold-gradient-text text-2xl min-[400px]:text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl drop-shadow-md">PREVISIBILIDADE.</span>
                 </h1>
                 
-                <!-- Typewriter -->
                 <div class="text-lg md:text-2xl font-semibold text-gray-200 mb-8 min-h-[3.5rem] md:min-h-0 flex items-center drop-shadow-sm">
                     <i class="fa-solid fa-angle-right text-brand-gold mr-3"></i>
                     <span id="typewriter" class="text-white"></span><span class="animate-pulse text-brand-gold ml-1">|</span>
@@ -179,28 +157,16 @@
                         <i class="fa-solid fa-clipboard-list text-2xl relative z-10"></i>
                         <span class="relative z-10">Aplicar para Consultoria</span>
                     </a>
-                    <!-- Botão secundário Calculadora Mobile -->
-                    <button onclick="openCalculator()" class="md:hidden flex items-center justify-center gap-3 py-4 px-6 border border-brand-gold/30 bg-brand-dark/50 backdrop-blur-sm hover:border-brand-gold text-white font-bold text-base uppercase tracking-wider transition-all duration-300 w-full text-center">
-                        <i class="fa-solid fa-calculator text-brand-gold"></i>
-                        Calcular Assinatura
-                    </button>
                 </div>
             </div>
 
             <!-- Coluna Imagem Desktop (Foto Profissional + Badges) -->
             <div class="hidden md:flex relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] items-center">
-                <!-- Fundo decorativo -->
                 <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-40 rounded-full"></div>
-                
-                <!-- Foto Principal -->
                 <img src="FotoProfissional.JPG" alt="Daniel Soldá" class="relative z-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-white/20 w-full object-cover grayscale-[10%] contrast-110 bg-brand-surface/50">
-                
-                <!-- Badge Kommo Partner -->
                 <div class="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-12 z-20 animate-float bg-white p-1.5 md:p-2 rounded-xl shadow-2xl border border-gray-200 scale-90 md:scale-100 min-w-[120px]">
                     <img src="Badge light.png" alt="Kommo Partner" class="h-12 md:h-20 w-full object-contain">
                 </div>
-
-                <!-- Elemento Flutuante Secundário -->
                 <div class="absolute top-4 -right-2 md:top-10 md:-right-6 z-20 animate-float-delayed glass-card px-3 py-2 md:px-4 md:py-3 rounded-xl border-brand-gold/40 flex items-center gap-2 md:gap-3 scale-75 md:scale-100 origin-top-right bg-brand-dark/80">
                     <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-sm md:text-base">
                         <i class="fa-solid fa-chart-line"></i>
@@ -249,7 +215,6 @@
 
     <!-- O que eu entrego Section -->
     <section class="py-24 px-4 bg-brand-surface relative overflow-hidden">
-        <!-- Detalhe de fundo -->
         <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-teal/10 skew-x-12 translate-x-1/4"></div>
         
         <div class="max-w-7xl mx-auto relative z-10">
@@ -425,9 +390,24 @@
         </div>
     </section>
 
+    <!-- NOVA SEÇÃO: Benefícios Parceiro Kommo (Substituiu a Calculadora) -->
+    <section class="py-24 px-4 bg-brand-surface relative overflow-hidden border-t border-white/5">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="text-center mb-12 reveal">
+                <h3 class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">Assinatura da Plataforma</h3>
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">BENEFÍCIOS EXCLUSIVOS NO <br><span class="gold-gradient-text">KOMMOCRM</span></h2>
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto font-medium">Os valores da consultoria não incluem as licenças do sistema. Porém, como parceiro oficial, consigo condições únicas e vantagens para a sua operação.</p>
+            </div>
+
+            <!-- Banner de Bônus de Parceiro Destaque Premium (Imagem) -->
+            <div class="w-full max-w-4xl mx-auto transform hover:scale-[1.02] transition-transform duration-300 reveal delay-100 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(197,163,101,0.3)] border-2 border-brand-gold/50">
+                <img src="Gemini_Generated_Image_snkk2xsnkk2xsnkk.png" alt="Vantagem Exclusiva Parceiro Oficial: Ganhe +1 Mês Grátis e 28 dias de teste gratuito" class="w-full h-auto object-cover block">
+            </div>
+        </div>
+    </section>
+
     <!-- Formulário de Aplicação -->
-    <section id="aplicacao" class="py-24 px-4 bg-brand-dark relative overflow-hidden">
-        <!-- Detalhes de Fundo -->
+    <section id="aplicacao" class="py-24 px-4 bg-brand-dark relative overflow-hidden border-t border-white/5">
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/4 pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-teal/20 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/4 pointer-events-none"></div>
 
@@ -628,11 +608,9 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
-                <a href="https://wa.me/5515997460895?text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20da%20Kommo" 
-                   target="_blank" 
-                   class="group flex items-center justify-center gap-3 py-5 px-10 bg-green-600 hover:bg-green-500 text-white font-black text-lg uppercase tracking-widest transition-all duration-300 shadow-[0_0_30px_rgba(22,163,74,0.4)] hover:shadow-[0_0_50px_rgba(22,163,74,0.6)]">
-                    <i class="fa-brands fa-whatsapp text-2xl animate-pulse"></i>
-                    <span>Chamar no WhatsApp</span>
+                <a href="#aplicacao" class="group flex items-center justify-center gap-3 py-5 px-10 bg-brand-gold hover:bg-brand-gold-hover text-brand-dark font-black text-lg uppercase tracking-widest transition-all duration-300 shadow-[0_0_30px_rgba(197,163,101,0.4)] hover:shadow-[0_0_50px_rgba(197,163,101,0.6)]">
+                    <i class="fa-solid fa-clipboard-list text-2xl animate-pulse"></i>
+                    <span>Aplicar para Consultoria</span>
                 </a>
                 
                 <a href="https://youtube.com/@crmproospecta?si=xZwPzwtl58rPxD8O" 
@@ -663,90 +641,7 @@
         <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-xl shadow-[0_0_50px_rgba(197,163,101,0.2)] scale-95 transition-transform duration-300 object-contain" alt="Feedback Ampliado" onclick="event.stopPropagation()">
     </div>
 
-    <!-- Modal da Calculadora Kommo (Inicia Oculto) -->
-    <div id="calculator-modal" class="fixed inset-0 z-[120] bg-black/90 hidden flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300">
-        <div class="bg-brand-surface border border-brand-gold/40 rounded-2xl w-full max-w-lg p-6 md:p-8 relative shadow-[0_0_50px_rgba(197,163,101,0.25)] max-h-[95vh] overflow-y-auto" onclick="event.stopPropagation()">
-            <button class="absolute top-4 right-5 text-gray-300 hover:text-white text-3xl focus:outline-none" onclick="closeCalculator()">&times;</button>
-            
-            <div class="flex items-center gap-3 mb-2">
-                <i class="fa-solid fa-calculator text-2xl text-brand-gold"></i>
-                <h3 class="text-2xl font-black text-white uppercase">Calculadora <span class="text-brand-gold">Kommo</span></h3>
-            </div>
-            <p class="text-sm text-gray-300 mb-6 font-medium">Simule o valor das licenças da plataforma para a sua operação.</p>
-            
-            <!-- Benefício Parceiro Destaque -->
-            <div class="bg-brand-gold/15 border border-brand-gold/40 rounded-xl p-4 mb-6 shadow-inner relative overflow-hidden">
-                <div class="absolute -right-4 -top-4 text-brand-gold/20 text-7xl"><i class="fa-solid fa-medal"></i></div>
-                <h4 class="font-bold text-brand-gold text-sm uppercase tracking-wide flex items-center gap-2 mb-3 relative z-10">
-                    <i class="fa-solid fa-gift"></i> Vantagem Oficial Parceiro
-                </h4>
-                <ul class="text-sm text-gray-200 space-y-2 relative z-10 font-medium">
-                    <li class="flex items-start"><i class="fa-solid fa-check text-green-400 mt-1 mr-2"></i> <span><strong>+1 Mês Grátis</strong> adicionado em qualquer pacote de assinatura que escolher.</span></li>
-                    <li class="flex items-start"><i class="fa-solid fa-check text-green-400 mt-1 mr-2"></i> <span><strong>28 dias de teste gratuito</strong> com a plataforma liberada antes de qualquer cobrança.</span></li>
-                </ul>
-            </div>
-
-            <div class="space-y-5">
-                <!-- Seleção do Plano -->
-                <div>
-                    <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">1. Selecione o Plano</label>
-                    <div class="grid grid-cols-3 gap-2">
-                        <button class="calc-plan-btn active border-brand-gold bg-brand-gold/20 text-white rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1 shadow-md" data-price="80">
-                            Básico
-                            <span class="text-[10px] font-normal text-gray-300">R$80 /mês</span>
-                        </button>
-                        <button class="calc-plan-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1" data-price="133">
-                            Avançado
-                            <span class="text-[10px] font-normal text-gray-400">R$133 /mês</span>
-                        </button>
-                        <button class="calc-plan-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl p-3 text-sm font-bold border transition-colors flex flex-col items-center justify-center gap-1" data-price="239">
-                            Pro
-                            <span class="text-[10px] font-normal text-gray-400">R$239 /mês</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Número de Usuários -->
-                <div>
-                    <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">2. Número de Usuários (Atendentes)</label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <i class="fa-solid fa-users text-gray-400"></i>
-                        </div>
-                        <input type="number" id="calc-users" min="1" value="1" class="w-full bg-brand-dark border border-white/20 rounded-xl py-3 pl-12 pr-4 text-white font-bold focus:outline-none focus:border-brand-gold transition-colors text-lg shadow-inner">
-                    </div>
-                </div>
-
-                <!-- Tempo de Assinatura -->
-                <div>
-                    <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">3. Tempo de Assinatura</label>
-                    <div class="grid grid-cols-4 gap-2">
-                        <button class="calc-time-btn active border-brand-gold bg-brand-gold/20 text-white rounded-xl py-2 text-sm font-bold border transition-colors shadow-md" data-months="6">6 Meses</button>
-                        <button class="calc-time-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="9">9 Meses</button>
-                        <button class="calc-time-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="12">12 Meses</button>
-                        <button class="calc-time-btn border-white/20 bg-brand-dark hover:bg-white/10 text-gray-300 rounded-xl py-2 text-sm font-bold border transition-colors" data-months="24">24 Meses</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Resultado Total -->
-            <div class="mt-8 border-t border-white/20 pt-6 bg-brand-dark/80 rounded-b-2xl -mx-6 -mb-6 p-6 md:-mx-8 md:-mb-8 md:p-8">
-                <div class="flex flex-col mb-1">
-                    <span class="text-xs text-gray-300 uppercase tracking-widest font-bold mb-1">Investimento Aproximado nas Licenças</span>
-                    <div class="text-4xl font-black gold-gradient-text" id="calc-total">R$ 0,00</div>
-                    <span class="text-[11px] text-gray-400 mt-2 italic font-medium">* Valores aproximados sujeitos à variação cambial do dólar.</span>
-                </div>
-                <div class="flex items-start gap-2 mt-3 p-3 bg-green-500/15 border border-green-500/30 rounded-lg">
-                    <i class="fa-solid fa-hand-holding-dollar text-green-400 mt-0.5"></i>
-                    <p class="text-xs text-green-400 font-bold leading-relaxed" id="calc-bonus-text">
-                        Bônus de Parceiro: Você paga por 6 meses e utiliza a plataforma por 7 meses inteiros!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts (Typewriter + Scroll Reveal + Lightbox + Calculadora) -->
+    <!-- Scripts (Typewriter + Scroll Reveal + Lightbox + Formulário) -->
     <script>
         // 1. Efeito Typewriter
         const phrases = [
@@ -836,108 +731,15 @@
                 lightbox.classList.remove('flex');
             }, 300);
         }
-        
-        // 4. Funções da Calculadora Kommo
-        let selectedPrice = 80;
-        let selectedMonths = 6;
-        let calcInitialized = false;
 
-        function initCalculator() {
-            if (calcInitialized) return;
-            calcInitialized = true;
-
-            const planBtns = document.querySelectorAll('.calc-plan-btn');
-            const timeBtns = document.querySelectorAll('.calc-time-btn');
-            const usersInput = document.getElementById('calc-users');
-
-            // Troca de Planos
-            planBtns.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    planBtns.forEach(b => {
-                        b.classList.remove('active', 'border-brand-gold', 'bg-brand-gold/20', 'text-white', 'shadow-md');
-                        b.classList.add('border-white/20', 'bg-brand-dark', 'text-gray-300');
-                    });
-                    const target = e.currentTarget;
-                    target.classList.remove('border-white/20', 'bg-brand-dark', 'text-gray-300');
-                    target.classList.add('active', 'border-brand-gold', 'bg-brand-gold/20', 'text-white', 'shadow-md');
-                    selectedPrice = parseInt(target.getAttribute('data-price'));
-                    updateCalculation();
-                });
-            });
-
-            // Troca de Meses
-            timeBtns.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    timeBtns.forEach(b => {
-                        b.classList.remove('active', 'border-brand-gold', 'bg-brand-gold/20', 'text-white', 'shadow-md');
-                        b.classList.add('border-white/20', 'bg-brand-dark', 'text-gray-300');
-                    });
-                    const target = e.currentTarget;
-                    target.classList.remove('border-white/20', 'bg-brand-dark', 'text-gray-300');
-                    target.classList.add('active', 'border-brand-gold', 'bg-brand-gold/20', 'text-white', 'shadow-md');
-                    selectedMonths = parseInt(target.getAttribute('data-months'));
-                    updateCalculation();
-                });
-            });
-
-            // Input de Usuários
-            usersInput.addEventListener('input', updateCalculation);
-            // Calcula inicialmente
-            updateCalculation();
-        }
-
-        function updateCalculation() {
-            const usersInput = document.getElementById('calc-users');
-            // Garante que o mínimo seja 1
-            let users = parseInt(usersInput.value);
-            if (isNaN(users) || users < 1) users = 1;
-            
-            const total = selectedPrice * users * selectedMonths;
-            
-            const formatter = new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
-                minimumFractionDigits: 2
-            });
-            
-            document.getElementById('calc-total').innerText = '≈ ' + formatter.format(total);
-            document.getElementById('calc-bonus-text').innerHTML = `<strong>Bônus de Parceiro:</strong> Você paga por ${selectedMonths} meses e utiliza a plataforma por <strong>${selectedMonths + 1} meses inteiros!</strong>`;
-        }
-
-        function openCalculator() {
-            const modal = document.getElementById('calculator-modal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            
-            // Inicia os listeners apenas uma vez na primeira abertura
-            initCalculator();
-            
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-            }, 10);
-        }
-
-        function closeCalculator() {
-            const modal = document.getElementById('calculator-modal');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }, 300);
-        }
-
-        // Fecha modais com a tecla ESC
+        // Fecha modal de imagem com a tecla ESC
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
                 closeLightbox();
-                closeCalculator();
             }
         });
         
-        // Clica fora para fechar o Modal da calculadora
-        document.getElementById('calculator-modal').addEventListener('click', closeCalculator);
-        
-        // 5. Envio do Formulário de Aplicação (Webhook)
+        // 4. Envio do Formulário de Aplicação (Webhook)
         const form = document.getElementById('consultoria-form');
         if (form) {
             form.addEventListener('submit', async function(e) {
