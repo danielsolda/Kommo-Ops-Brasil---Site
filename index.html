@@ -121,25 +121,20 @@
 
     <!-- Hero Section -->
     <header class="relative pt-32 md:pt-40 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[80vh] md:min-h-[85vh] flex flex-col justify-center">
-        
-        <!-- Imagem desfocada de fundo para modo Mobile -->
-        <div class="absolute inset-0 z-0 md:hidden pointer-events-none overflow-hidden">
-            <img src="FotoProfissional.JPG" alt="" class="w-full h-full object-cover object-[center_top] opacity-25 blur-2xl scale-110">
-            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/10 via-brand-dark/70 to-brand-dark"></div>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center relative z-10">
+        <!-- Grid atualizado para items-start (alinhamento no topo) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start relative z-10 pt-4 md:pt-0">
             
             <!-- Coluna Texto -->
             <div class="z-10 reveal-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 mt-6 md:mt-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 mt-2 md:mt-0">
                     <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                     Transformação Comercial
                 </div>
                 
                 <h1 class="font-black tracking-tighter mb-4 text-white flex flex-col leading-none md:leading-[1.05]">
                     <span class="text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl mb-1 md:mb-0 drop-shadow-md">VENDAS COM</span>
-                    <span class="gold-gradient-text text-2xl min-[400px]:text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl drop-shadow-md">PREVISIBILIDADE.</span>
+                    <span class="gold-gradient-text text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl drop-shadow-md">PREVISIBILIDADE.</span>
                 </h1>
                 
                 <div class="text-lg md:text-2xl font-semibold text-gray-200 mb-8 min-h-[3.5rem] md:min-h-0 flex items-center drop-shadow-sm">
@@ -160,13 +155,15 @@
                 </div>
             </div>
 
-            <!-- Coluna Imagem Desktop (Foto Profissional + Badges) -->
-            <div class="hidden md:flex relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-6 lg:mt-0 min-h-[300px] md:min-h-[500px] items-center">
+            <!-- Coluna Imagem Desktop (Foto Profissional + Badges alinhados ao topo) -->
+            <div class="flex relative w-full max-w-md mx-auto lg:ml-auto reveal-right mt-12 lg:mt-0 items-start">
                 <div class="absolute inset-0 bg-brand-teal blur-[100px] opacity-40 rounded-full"></div>
                 <img src="FotoProfissional.JPG" alt="Daniel Soldá" class="relative z-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-white/20 w-full object-cover grayscale-[10%] contrast-110 bg-brand-surface/50">
+                
                 <div class="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-12 z-20 animate-float bg-white p-1.5 md:p-2 rounded-xl shadow-2xl border border-gray-200 scale-90 md:scale-100 min-w-[120px]">
                     <img src="Badge light.png" alt="Kommo Partner" class="h-12 md:h-20 w-full object-contain">
                 </div>
+                
                 <div class="absolute top-4 -right-2 md:top-10 md:-right-6 z-20 animate-float-delayed glass-card px-3 py-2 md:px-4 md:py-3 rounded-xl border-brand-gold/40 flex items-center gap-2 md:gap-3 scale-75 md:scale-100 origin-top-right bg-brand-dark/80">
                     <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-sm md:text-base">
                         <i class="fa-solid fa-chart-line"></i>
